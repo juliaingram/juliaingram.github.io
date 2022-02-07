@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+        <link rel='stylesheet' href='article-styles.css'>
+        <?PHP
+        echo shell_exec("tableau-embed.py");
+        ?>
+        <title>Citi Bike</title>
+        <div class='topnav'>
+            <a href='http://juliaingram.github.io'>Return to homepage</a>
+            <a>Read about this project</a>
+        </div>
+    </head>
+    <body>
+        <div class="text-container">
+            <h1 class='headline'>The pandemic changed rush hour traffic, and Citi Bike felt the impacts</h1>
+            <img class=header-image src='citibike-thames.png'>
+            <p class='photo-caption'>Citi Bike rides reached new heights in 2021 (Photo: Julia Ingram)</p>
+            <p class='date'>
+                <a class='byline a' href="mailto:jmi2124@columbia.edu">By Julia Ingram</a>
+                February 6, 2022
+            </p>
+            <p>
+                In the early months of the pandemic, many New Yorkers turned from subways and buses to cycling. Bike sales jumped, and so did use of the city's bike-share system, Citi Bike. 
+                <br><br>Now, with the city long reopened, Citi Bike ridership is at an all-time high, with a record 3.3 million rides logged in September 2021, the company's highest monthly total. 
+                Between 2018 and 2021, total annual Citi Bike rides have jumped 58%, data <a href='https://ride.citibikenyc.com/system-data'>published by the company</a> shows.
+                <br><br>But ridership patterns throughout the day have shifted, an analysis of the last four years of New York City ridership data shows. In the work-from-home era, the data shows suggests that people are using Citi Bike more everyday travel and less for commuting during the pandemic.
+            </p>
+            <p class='subhead'>Citi Bike's growth</p>
+            <p>Cycling has exploded across New York City during the pandemic. The city saw a 33% growth in cycling between May and December 2020 and a 63% growth in weekend cycling over the same timeframe, according to the Department of Transit's latest <a href='https://www1.nyc.gov/html/dot/downloads/pdf/cycling-in-the-city-2021.pdf'>report</a> on cycling trends, released September 2021. 
+            <br><br>That growth is reflected in Citi Bike, as ridership has exceeded 2019 monthly ridership levels since October 2020. MTA Subway ridership, on the other hand, has only reached half of what it was before the pandemic, according to <a href='https://new.mta.info/coronavirus/ridership'>daily ridership data</a> released by the agency. 
+            </p>
+            <div class='viz-container'>
+                <img src='citibike-mta.png' alt='Citi Bike ridership eclipses pre-pandemic levels as MTA subway ridership crawls back'>
+            </div>
+            <p class='viz-caption'>Pre-pandemic ridership levels for Citi Bike were calculated by taking the total number of rides for each month in 2019. For MTA subway, they were figured by taking the median each month of the daily values for percent of pre-pandemic ridership provided by the MTA.</p>
+            <p>Citi Bike has also expanded since 2018, accounting for some of its growth. The rideshare program has grown from about 850 to over 1,600 stations in the last four years, the data shows, including expanding the number of docks available in outer boroughs.  
+            <br><br>While the data doesn't show whether would-be subway riders are opting for Citi Bike, spikes in Citi Bike usage occurred when the subway faced outages. In the aftermath of Hurricane Ida, when subway stations were flooded and every subway line experienced limited or no service, Citi Bike <a href='https://ride.citibikenyc.com/blog/citi-bike-breaks-single-day-ridership-record-during-tropical-storm-recovery'>broke a daily ridership record</a> on Sept. 2, 2021. 
+            </p>
+            <p class="subhead">Daily ridership patterns shift</p>
+            <p>
+                In 2018 and 2019, rides peaked between 8 and 9 a.m. and between 5 p.m. and 7 p.m. But over the last two years, while the evening rush remains, rides are more evenly distributed throughout daytime hours. 
+                <br><br>Non-member ridership has grown as well, further pointing to the shift from commuting for Citi Bike. The percentage of rides taken by those who pay per ride or per day rather than those who pay a $185 annual membership fee for unlimited rides has grown from 11% of all rides in 2018 to 30% in 2021. 
+                <br><br>The shift has meant that riders are encountering empty stations when they're in need of a bike and full ones where they're looking to dock. Citi Bike acknowledged this in a <a href='https://ride.citibikenyc.com/blog/ridershiprecords'>September 2021 blog post</a>, with representatives voicing efforts to adapt the rideshare system to rising and shifting demand. 
+            </p>
+            <div class='viz-container'>
+                <img src='citibike-daily.png' alt='Citi Bike ridership shifted during the pandemic, with fewer rides during the morning rush.'>
+            </div>
+            <p>
+                "Riding patterns are more complicated and unpredictable than ever, with hybrid work schedules layered on top of schools reopening, and warm weather recreational rides that don't follow traditional commuting patterns, creating imbalances in the system," a Citi Bike representative wrote in the post.
+                <br><br>These unpredictable patterns are visible not only in when riders get on bikes, but also where they;re going. Midday and afternoon rides in 2018 and 2019 clustered in Midtown, for example, while 2020 and 2021 rides are more scattered. Many of the most popular start and end points for rides are on Manhattan's west side, near the Hudson River Greenway, suggested a possible shift to more recreational rides. 
+                <br><br>The top ten most popular stations to start and end a ride throughout the day in each of the last four years are displayed on the two maps below. Toggle the hour with the navigation pane to the right of the ma, or click the play button to watch how rides change throughout the day. 
+            </p>
+            <p class='footnote'>This story was done for Data Studio, a class in the Columbia Journalism School. To view the source code and read more about the project, visit the GitHub repository here.</p>
+            <div class="viz-container">
+                <script type='text/javascript' src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 760px; height: 705px;'><object class='tableauViz' width='760px' height='705px' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;juliasviz' /><param name='name' value='CitibikeHourMap&#47;Started' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
+                <script type='text/javascript' src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 760px; height: 696px;'><object class='tableauViz' width='760' height='696' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;juliasviz' /><param name='name' value='CitibikeHourMap&#47;Ended' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
+            </div>
+        </div>
+    </body>
+</html>
