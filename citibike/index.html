@@ -3,13 +3,10 @@
     <head>
         <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
         <link rel='stylesheet' href='article-styles.css'>
-        <?PHP
-        echo shell_exec("tableau-embed.py");
-        ?>
         <title>Citi Bike</title>
         <div class='topnav'>
             <a href='http://juliaingram.github.io'>Return to homepage</a>
-            <a>Read about this project</a>
+            <a href='https://github.com/juliaingram/citibike-ridership'>Read about this project</a>
         </div>
     </head>
     <body>
@@ -54,10 +51,10 @@
             </p>
             <p class='footnote'>This story was done for Data Studio, a class in the Columbia Journalism School. To view the source code and read more about the project, visit the GitHub repository here.</p>
             <div class='viz-container'>
-                <video width=760px src='citibike-started-map.mp4'>
+                <video width=760px controls src='citibike-started-map.mp4'>
             </div>
             <div class='viz-container'>
-                <video width=760px src='citibike-ended-map.mp4'>
+                <video width=760px controls src='citibike-ended-map.mp4'>
             </div>
             <!--<div class="viz-container">
                 <script type='text/javascript' src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 760px; height: 705px;'><object class='tableauViz' width='760px' height='705px' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;juliasviz' /><param name='name' value='CitibikeHourMap&#47;Started' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
