@@ -1,65 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-        <link rel='stylesheet' href='article-styles.css'>
-        <title>Citi Bike</title>
-        <div class='topnav'>
-            <a href='http://juliaingram.github.io'>Return to homepage</a>
-            <a href='https://github.com/juliaingram/citibike-ridership'>Read about this project</a>
-        </div>
-    </head>
-    <body>
-        <div class="text-container">
-            <h1 class='headline'>The pandemic changed rush hour traffic, and Citi Bike felt the impacts</h1>
-            <img class=header-image src='citibike-thames.png'>
-            <p class='photo-caption'>Citi Bike rides reached new heights in 2021 (Photo: Julia Ingram)</p>
-            <p class='date'>
-                <a class='byline a' href="mailto:jmi2124@columbia.edu">By Julia Ingram</a>
-                February 6, 2022
-            </p>
-            <p>
-                In the early months of the pandemic, many New Yorkers turned from subways and buses to cycling. Bike sales jumped, and so did use of the city's bike-share system, Citi Bike. 
-                <br><br>Now, with the city long reopened, Citi Bike ridership is at an all-time high, with a record 3.3 million rides logged in September 2021, the company's highest monthly total. 
-                Between 2018 and 2021, total annual Citi Bike rides have jumped 58%, data <a href='https://ride.citibikenyc.com/system-data'>published by the company</a> shows.
-                <br><br>But ridership patterns throughout the day have shifted, an analysis of the last four years of New York City ridership data shows. In the work-from-home era, the data shows suggests that people are using Citi Bike more everyday travel and less for commuting during the pandemic.
-            </p>
-            <p class='subhead'>Citi Bike's growth</p>
-            <p>Cycling has exploded across New York City during the pandemic. The city saw a 33% growth in cycling between May and December 2020 and a 63% growth in weekend cycling over the same timeframe, according to the Department of Transit's latest <a href='https://www1.nyc.gov/html/dot/downloads/pdf/cycling-in-the-city-2021.pdf'>report</a> on cycling trends, released September 2021. 
-            <br><br>That growth is reflected in Citi Bike, as ridership has exceeded 2019 monthly ridership levels since October 2020. MTA Subway ridership, on the other hand, has only reached half of what it was before the pandemic, according to <a href='https://new.mta.info/coronavirus/ridership'>daily ridership data</a> released by the agency. 
-            </p>
-            <div class='viz-container'>
-                <img src='citibike-mta.png' alt='Citi Bike ridership eclipses pre-pandemic levels as MTA subway ridership crawls back'>
-            </div>
-            <p class='viz-caption'>Pre-pandemic ridership levels for Citi Bike were calculated by taking the total number of rides for each month in 2019. For MTA subway, they were figured by taking the median each month of the daily values for percent of pre-pandemic ridership provided by the MTA.</p>
-            <p>Citi Bike has also expanded since 2018, accounting for some of its growth. The rideshare program has grown from about 850 to over 1,600 stations in the last four years, the data shows, including expanding the number of docks available in outer boroughs.  
-            <br><br>While the data doesn't show whether would-be subway riders are opting for Citi Bike, spikes in Citi Bike usage occurred when the subway faced outages. In the aftermath of Hurricane Ida, when subway stations were flooded and every subway line experienced limited or no service, Citi Bike <a href='https://ride.citibikenyc.com/blog/citi-bike-breaks-single-day-ridership-record-during-tropical-storm-recovery'>broke a daily ridership record</a> on Sept. 2, 2021. 
-            </p>
-            <p class="subhead">Daily ridership patterns shift</p>
-            <p>
-                In 2018 and 2019, rides peaked between 8 and 9 a.m. and between 5 p.m. and 7 p.m. But over the last two years, while the evening rush remains, rides are more evenly distributed throughout daytime hours. 
-                <br><br>Non-member ridership has grown as well, further pointing to the shift from commuting for Citi Bike. The percentage of rides taken by those who pay per ride or per day rather than those who pay a $185 annual membership fee for unlimited rides has grown from 11% of all rides in 2018 to 30% in 2021. 
-                <br><br>The shift has meant that riders are encountering empty stations when they're in need of a bike and full ones where they're looking to dock. Citi Bike acknowledged this in a <a href='https://ride.citibikenyc.com/blog/ridershiprecords'>September 2021 blog post</a>, with representatives voicing efforts to adapt the rideshare system to rising and shifting demand. 
-            </p>
-            <div class='viz-container'>
-                <img src='citibike-daily.png' alt='Citi Bike ridership shifted during the pandemic, with fewer rides during the morning rush.'>
-            </div>
-            <p>
-                "Riding patterns are more complicated and unpredictable than ever, with hybrid work schedules layered on top of schools reopening, and warm weather recreational rides that don't follow traditional commuting patterns, creating imbalances in the system," a Citi Bike representative wrote in the post.
-                <br><br>These unpredictable patterns are visible not only in when riders get on bikes, but also where they;re going. Midday and afternoon rides in 2018 and 2019 clustered in Midtown, for example, while 2020 and 2021 rides are more scattered. Many of the most popular start and end points for rides are on Manhattan's west side, near the Hudson River Greenway, suggested a possible shift to more recreational rides. 
-                <br><br>The top ten most popular stations to start and end a ride throughout the day in each of the last four years are displayed on the two maps below. Toggle the hour with the navigation pane to the right of the ma, or click the play button to watch how rides change throughout the day. 
-            </p>
-            <p class='footnote'>This story was done for Data Studio, a class in the Columbia Journalism School. To view the source code and read more about the project, visit the GitHub repository <a href='https://github.com/juliaingram/citibike-ridership'>here</a>.</p>
-            <div class='viz-container'>
-                <video width=760px controls src='citibike-started-map.mp4'>
-            </div>
-            <div class='viz-container'>
-                <video width=760px controls src='citibike-ended-map.mp4'>
-            </div>
-            <!--<div class="viz-container">
-                <script type='text/javascript' src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 760px; height: 705px;'><object class='tableauViz' width='760px' height='705px' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;juliasviz' /><param name='name' value='CitibikeHourMap&#47;Started' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
-                <script type='text/javascript' src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 760px; height: 696px;'><object class='tableauViz' width='760' height='696' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;juliasviz' /><param name='name' value='CitibikeHourMap&#47;Ended' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
-            </div>-->
-        </div>
-    </body>
+  <head>
+    <title>Julia Ingram's portfolio</title>
+    <link rel='stylesheet' href='styles.css'>
+    <script src="https://kit.fontawesome.com/9773687779.js" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src='filter-stories.js'></script>
+  </head>
+  <body>
+    <h1>Julia Ingram</h1>
+    <div class="rrss">
+        <a href="https://github.com/jmingram1" title="Github" target="_blank"><span class="title"><i class="fab fa-github"></i></span><a>
+        <a href="https://www.linkedin.com/in/julia-ingram" title="Linkedin" target="_blank"><span class="title"><i class="fab fa-linkedin-in"></i></span><a>
+        <a href="https://twitter.com/juliaingram_" title="Twitter" target="_blank"><span class="title"><i class="fab fa-twitter"></i></span><a>
+        <a href="mailto:julia.ingram@columbia.edu" target="_top" title="E-mail"><span class="title"><i class="fas fa-envelope"></i></span><a>
+      </div>
+      
+      <p class="bio">I'm a student pursuing a master's in data journalism at Columbia Journalism School and a recent graduate of Stanford University. I've written for The Washington Post, NBC News, the Miami Herald and The Stanford Daily. Read some of my work below.</span></p>
+      
+      <!-- buttons -->
+
+          <label class="btn" onclick="filterSelection('data')">
+            <input type="radio" value="data">
+            <span>Data-driven</span>
+          </label>
+          <label class="btn" onclick="filterSelection('investigation')">
+            <input type="radio" value="investigation">
+            <span>Investigations</span>
+          </label>
+          <label class="btn" onclick="filterSelection('local')">
+            <input type="radio" name="stuff" value="local">
+            <span>Local Enterprise</span>
+          </label>
+          <span class="btn reset" id='all' onclick="filterSelection('all')"><span>All</span></span>
+        
+          <!--<button class="btn" data-category="ddj"> Data-driven </button> <button class="btn" data-category="interactive"> Interactive </button> <button class="btn" data-category="automation"> Automation </button> -->
+
+
+      </p>
+      </div>
+
+      <!-- Portfolio Gallery Grid -->
+
+<div class="row">
+
+  <!-- Editing -->
+
+  <div class="column filterDiv data">
+
+    <a href="https://juliaingram.github.io/citibike" target="_blank">
+    <div class="content">
+
+      <div class="info">
+        <div class="skills left-half nomargin">🖥️Pandas, HTML, CSS, Tableau</div>
+        <div class="date right-half nomargin">February 2022</div>
+      </div>
+
+      <img class="itemimage" src="citibike-thames.png" alt="Citi Bike analysis" style="width:100%">
+      <h3 class="title"><span class="title">Citi Bike during the pandemic</span></h3>
+      <div class="publication">Columbia J-School</div>
+      <p class="description">Citi Bike ridership exploded in 2021, and fewer people are using it to commute in the morning. An analysis of ridership patterns and an animated map of where people ride throughout the day.</p>
+      
+    </a>
+    </div>
+
+  </div>
+
+  <div class="column filterDiv data">
+
+    <a href="https://www.washingtonpost.com/business/2021/08/01/tsunami-deferred-debt-is-about-hit-homeowners-no-longer-protected-by-foreclosure-moratorium/" target="_blank">
+    <div class="content">
+
+      <div class="info">
+        <div class="skills left-half nomargin">🖥️Python, spreadsheets</div>
+        <div class="date right-half nomargin">August 2021</div>
+      </div>
+
+      <img class="itemimage" src="forbearance.jpeg" alt="Mortgage delinquency" style="width:100%">
+      <h3 class="title"><span class="title">Mortgage delinquency</span></h3>
+      <div class="publication">The Washington Post</div>
+      <p class="description">Over 2 million homeowners were in debt ahead of the national foreclosure moratorium's expiration. Low-income borrowers and borrowers of color were most impacted.</p>
+      
+    </a>
+    </div>
+
+  </div>
+
+  <div class="column filterDiv data">
+
+    <a href="https://github.com/jmingram1/zocdoc-scrape" target="_blank">
+    <div class="content">
+
+      <div class="info">
+        <div class="skills left-half nomargin">🖥️Web scraping, Mapbox GL JS</div>
+        <div class="date right-half nomargin">December 2021</div>
+      </div>
+
+      <img class="itemimage" src="zocdoc-map.gif" alt="Zocdoc Map NYC" style="width:100%">
+      <h3 class="title"><span class="title">Primary care providers on Zocdoc</span></h3>
+      <div class="publication">Columbia J-School</div>
+      <p class="description">An interactive map showing disparities in access to care on the online platform Zocdoc in New York City.</p>
+      
+    </a>
+    </div>
+
+  </div>
+
+  <div class="column filterDiv data investigation">
+
+    <a href="https://www.washingtonpost.com/business/interactive/2021/fossil-fuel-climate-bonus/" target="_blank">
+    <div class="content">
+
+      <div class="info">
+        <div class="skills left-half nomargin">🖥️Spreadsheets</div>
+        <div class="date right-half nomargin">October 2021</div>
+      </div>
+
+      <img class="itemimage" src="climatepay.png" alt="Climate bonuses" style="width:100%">
+      <h3 class="title"><span class="title">Climate bonuses</span></h3>
+      <div class="publication">The Washington Post</div>
+      <p class="description">CEOs of fossil fuel companies make millions for meeting climate targets despite continuing to cause environmental damage. Sen. Elizabeth Warren called for an SEC investigation into the companies executive compensation following the story.</p>
+      
+    </a>
+    </div>
+
+  </div>
+
+  <div class="column filterDiv data">
+
+    <a href="https://www.nbcnews.com/health/kids-health/has-child-abuse-surged-under-covid-19-despite-alarming-stories-n1234713" target="_blank">
+    <div class="content">
+
+      <div class="info">
+        <div class="skills left-half nomargin">🖥️Public records requests, spreadsheets</div>
+        <div class="date right-half nomargin">July 2020</div>
+      </div>
+
+      <img class="itemimage" src="childabuse.jpeg" alt="Child abuse reporting" style="width:100%">
+      <h3 class="title"><span class="title">Child abuse underreporting</span></h3>
+      <div class="publication">NBC News</div>
+      <p class="description">Data from 43 states showed that reports of child abuse around the nation have plunged during the first wave of the coronavirus pandemic and lockdown.</p>
+      
+    </a>
+    </div>
+
+  </div>
+
+  <div class="column filterDiv investigation">
+
+    <a href="https://www.nbcnews.com/news/us-news/he-reported-being-assaulted-cops-minneapolis-pd-why-did-nobody-n1236128" target="_blank">
+    <div class="content">
+
+      <div class="info">
+        <div class="skills left-half nomargin">📖Public records</div>
+        <div class="date right-half nomargin">August 2020</div>
+      </div>
+
+      <img class="itemimage" src="nbc-cops.jpeg" alt="Minneapolis Police Complaints" style="width:100%">
+      <h3 class="title"><span class="title">Unresolved complaints against police</span></h3>
+      <div class="publication">NBC News</div>
+      <p class="description">Hundreds of complaints filed against the Minneapolis Police Department were filed as 'inquries' and never addressed.</p>
+      
+    </a>
+    </div>
+
+  </div>
+
+  <div class="column filterDiv investigation">
+
+    <a href="https://stanforddaily.com/2018/08/28/a-closer-look-at-stanfords-leave-of-absence-policies/" target="_blank">
+    <div class="content">
+  
+      <div class="info">
+        <div class="skills left-half nomargin">📖Court records</div>
+        <div class="date right-half nomargin">August 2018</div>
+      </div>
+  
+      <img class="itemimage" src="vaden-sdaily.jpg" alt="Involuntary leaves of absence" style="width:100%">
+      <h3 class="title"><span class="title">Involuntary leaves of absence</span></h3>
+      <div class="publication">The Stanford Daily</div>
+      <p class="description">Stanford University placed students who experienced suicidal ideation or attempted suicide on a forced leave of absence, a move that some students said actually worsened their mental health.</p>
+      
+    </a>
+    </div>
+  
+  </div>
+  
+  <div class="column filterDiv local">
+
+    <a href="https://www.miamiherald.com/news/local/community/miami-dade/article233266173.html" target="_blank">
+    <div class="content">
+  
+      <div class="info">
+        <div class="skills left-half nomargin">🏃‍♀️In-person reporting, photo/video</div>
+        <div class="date right-half nomargin">August 2019</div>
+      </div>
+  
+      <img class="itemimage" src="boat-miami.jpg" alt="Abandoned boats" style="width:100%">
+      <h3 class="title"><span class="title">Abandoned boats</span></h3>
+      <div class="publication">Miami Herald</div>
+      <p class="description">Derelict boats littered the Miami River. Neighboring residents took it to city council.</p>
+      
+    </a>
+    </div>
+  
+  </div>  
+
+  <div class="column filterDiv data">
+
+    <a href="https://stanforddaily.com/2019/02/05/amid-record-number-of-transports-a-look-at-stanfords-alcohol-prevention-initiatives/" target="_blank">
+    <div class="content">
+  
+      <div class="info">
+        <div class="skills left-half nomargin">📖Public records requests</div>
+        <div class="date right-half nomargin">February 2019</div>
+      </div>
+  
+      <img class="itemimage" src="alcohol-chart.png" alt="Alcohol policies at Stanford" style="width:100%">
+      <h3 class="title"><span class="title">Record hospitalizations for drinking</span></h3>
+      <div class="publication">The Stanford Daily</div>
+      <p class="description">Stanford shifts much of the responsibility of regulating drinking on campus to student RAs. Records showed that in 2018, more students were hospitalizied for alcohol poisoning than had been in 12 years.</p>
+      
+    </a>
+    </div>
+  
+  </div>  
+
+  <div class="column filterDiv local">
+
+    <a href="https://www.miamiherald.com/news/local/environment/article234158642.html" target="_blank">
+    <div class="content">
+  
+      <div class="info">
+        <div class="date right-half nomargin">August 2019</div>
+      </div>
+  
+      <img class="itemimage" src="plastic-miami.jpeg" alt="Plastic regulation in Miami" style="width:100%">
+      <h3 class="title"><span class="title">Politics of regulating single-use plastic</span></h3>
+      <div class="publication">Miami Herald</div>
+      <p class="description">In Florida, a state pre-emption prevents local municipalities from regulating plastics, leaving big business to force small towns to roll back their plastic bans.</p>
+      
+    </a>
+    </div>
+  
+  </div>  
+
+  <div class="column filterDiv local">
+
+    <a href="https://columbianewsservice.com/2021/10/19/tensions-between-delivery-cyclists-and-upper-west-residents-mount-in-latest-e-bike-battle/?back-url=https%3A%2F%2Fcolumbianewsservice.com" target="_blank">
+    <div class="content">
+  
+      <div class="info">
+        <div class="skills left-half nomargin">🏃‍♀️In-person reporting, photo/video</div>
+        <div class="date right-half nomargin">October 2021</div>
+      </div>
+  
+      <img class="itemimage" src="ebike-delivery.jpeg" alt="Delivery workers rely on e-bikes" style="width:100%">
+      <h3 class="title"><span class="title">Delivery workers' use of e-bikes sparks tension</span></h3>
+      <div class="publication">Columbia News Service</div>
+      <p class="description">On New York City's Upper West Side, residents argue e-bikes are a danger to pedestrians. But delivery workers rely on them to make a living wage.</p>
+      
+    </a>
+    </div>
+  
+  </div>  
+
+  <div class="column filterDiv local data">
+
+    <a href="https://columbianewsservice.com/2021/12/17/nyc-daycares-and-preschools-face-hiring-challenges-compounded-by-vaccine-mandate/?back-url=https://columbianewsservice.com/" target="_blank">
+    <div class="content">
+  
+      <div class="info">
+        <div class="skills left-half nomargin">🖥️Datawrapper</div>
+        <div class="date right-half nomargin">December 2021</div>
+      </div>
+  
+      <img class="itemimage" src="childcare-chart.png" alt="Daycare labor shortage" style="width:100%">
+      <h3 class="title"><span class="title">Vaccine mandate adds staffing pressure to daycares</span></h3>
+      <div class="publication">Columbia News Service</div>
+      <p class="description">Industry employment was creeping toward pre-pandemic levels. But in small centers, the absence of even one teacher is acutely felt.</p>
+      
+    </a>
+    </div>
+  
+  </div>  
+
+  <div class="column filterDiv local">
+
+    <a href="https://stanforddaily.com/2021/05/22/tdx-appeals-disbanding-decision-citing-efforts-to-intervene-before-students-2020-death/" target="_blank">
+    <div class="content">
+  
+      <div class="info">
+        <div class="skills left-half nomargin">📖Public records requests</div>
+        <div class="date right-half nomargin">May 2021</div>
+      </div>
+  
+      <img class="itemimage" src="tdx.jpg" alt="TDX fraternity at Stanford" style="width:100%">
+      <h3 class="title"><span class="title">Fraternity points the finger at University after student death</span></h3>
+      <div class="publication">The Stanford Daily</div>
+      <p class="description">Stanford disbanded the TDX fraternity after a student died of an accidental overdose in its house. More than a year later, the organization pushed for its reinstatement, claiming they failed to intervene in a second drug incident two days before the student's death.</p>
+      
+    </a>
+    </div>
+  
+  </div>  
+
+</div>
+
+  </body>
+
+  <footer>
+    <p class='credit'>Website theme inspired by <a class='creditlink' href="adrianblancoramos.com">Adrian Blanco</a></p>
+  </footer>
 </html>
