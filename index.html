@@ -1,315 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Julia Ingram's portfolio</title>
-    <link rel='stylesheet' href='styles.css'>
-    <script src="https://kit.fontawesome.com/9773687779.js" crossorigin="anonymous"></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <script src='filter-stories.js'></script>
-  </head>
-  <body>
-    <h1>Julia Ingram</h1>
-    <div class="rrss">
-        <a href="https://github.com/jmingram1" title="Github" target="_blank"><span class="title"><i class="fab fa-github"></i></span><a>
-        <a href="https://www.linkedin.com/in/julia-ingram" title="Linkedin" target="_blank"><span class="title"><i class="fab fa-linkedin-in"></i></span><a>
-        <a href="https://twitter.com/juliaingram_" title="Twitter" target="_blank"><span class="title"><i class="fab fa-twitter"></i></span><a>
-        <a href="mailto:julia.ingram@columbia.edu" target="_top" title="E-mail"><span class="title"><i class="fas fa-envelope"></i></span><a>
-      </div>
-      
-      <p class="bio">I'm a student pursuing a master's in data journalism at Columbia Journalism School and a recent graduate of Stanford University. I've written for The Washington Post, NBC News, the Miami Herald and The Stanford Daily. Read some of my work below.</span></p>
-      
-      <!-- buttons -->
-
-          <label class="btn" onclick="filterSelection('data')">
-            <input type="radio" value="data">
-            <span>Data-driven</span>
-          </label>
-          <label class="btn" onclick="filterSelection('investigation')">
-            <input type="radio" value="investigation">
-            <span>Investigations</span>
-          </label>
-          <label class="btn" onclick="filterSelection('local')">
-            <input type="radio" name="stuff" value="local">
-            <span>Local Enterprise</span>
-          </label>
-          <span class="btn reset" id='all' onclick="filterSelection('all')"><span>All</span></span>
-        
-          <!--<button class="btn" data-category="ddj"> Data-driven </button> <button class="btn" data-category="interactive"> Interactive </button> <button class="btn" data-category="automation"> Automation </button> -->
-
-
-      </p>
-      </div>
-
-      <!-- Portfolio Gallery Grid -->
-
-<div class="row">
-
-  <!-- Editing -->
-
-  <div class="column filterDiv data">
-
-    <a href="https://juliaingram.github.io/citibike" target="_blank">
-    <div class="content">
-
-      <div class="info">
-        <div class="skills left-half nomargin">🖥️Pandas, HTML, CSS, Tableau</div>
-        <div class="date right-half nomargin">February 2022</div>
-      </div>
-
-      <img class="itemimage" src="citibike-thames.png" alt="Citi Bike analysis" style="width:100%">
-      <h3 class="title"><span class="title">Citi Bike during the pandemic</span></h3>
-      <div class="publication">Columbia J-School</div>
-      <p class="description">Citi Bike ridership exploded in 2021, and fewer people are using it to commute in the morning. An analysis of ridership patterns and an animated map of where people ride throughout the day.</p>
-      
-    </a>
-    </div>
-
-  </div>
-
-  <div class="column filterDiv data">
-
-    <a href="https://www.washingtonpost.com/business/2021/08/01/tsunami-deferred-debt-is-about-hit-homeowners-no-longer-protected-by-foreclosure-moratorium/" target="_blank">
-    <div class="content">
-
-      <div class="info">
-        <div class="skills left-half nomargin">🖥️Python, spreadsheets</div>
-        <div class="date right-half nomargin">August 2021</div>
-      </div>
-
-      <img class="itemimage" src="forbearance.jpeg" alt="Mortgage delinquency" style="width:100%">
-      <h3 class="title"><span class="title">Mortgage delinquency</span></h3>
-      <div class="publication">The Washington Post</div>
-      <p class="description">Over 2 million homeowners were in debt ahead of the national foreclosure moratorium's expiration. Low-income borrowers and borrowers of color were most impacted.</p>
-      
-    </a>
-    </div>
-
-  </div>
-
-  <div class="column filterDiv data">
-
-    <a href="https://github.com/jmingram1/zocdoc-scrape" target="_blank">
-    <div class="content">
-
-      <div class="info">
-        <div class="skills left-half nomargin">🖥️Web scraping, Mapbox GL JS</div>
-        <div class="date right-half nomargin">December 2021</div>
-      </div>
-
-      <img class="itemimage" src="zocdoc-map.gif" alt="Zocdoc Map NYC" style="width:100%">
-      <h3 class="title"><span class="title">Primary care providers on Zocdoc</span></h3>
-      <div class="publication">Columbia J-School</div>
-      <p class="description">An interactive map showing disparities in access to care on the online platform Zocdoc in New York City.</p>
-      
-    </a>
-    </div>
-
-  </div>
-
-  <div class="column filterDiv data investigation">
-
-    <a href="https://www.washingtonpost.com/business/interactive/2021/fossil-fuel-climate-bonus/" target="_blank">
-    <div class="content">
-
-      <div class="info">
-        <div class="skills left-half nomargin">🖥️Spreadsheets</div>
-        <div class="date right-half nomargin">October 2021</div>
-      </div>
-
-      <img class="itemimage" src="climatepay.png" alt="Climate bonuses" style="width:100%">
-      <h3 class="title"><span class="title">Climate bonuses</span></h3>
-      <div class="publication">The Washington Post</div>
-      <p class="description">CEOs of fossil fuel companies make millions for meeting climate targets despite continuing to cause environmental damage. Sen. Elizabeth Warren called for an SEC investigation into the companies executive compensation following the story.</p>
-      
-    </a>
-    </div>
-
-  </div>
-
-  <div class="column filterDiv data">
-
-    <a href="https://www.nbcnews.com/health/kids-health/has-child-abuse-surged-under-covid-19-despite-alarming-stories-n1234713" target="_blank">
-    <div class="content">
-
-      <div class="info">
-        <div class="skills left-half nomargin">🖥️Public records requests, spreadsheets</div>
-        <div class="date right-half nomargin">July 2020</div>
-      </div>
-
-      <img class="itemimage" src="childabuse.jpeg" alt="Child abuse reporting" style="width:100%">
-      <h3 class="title"><span class="title">Child abuse underreporting</span></h3>
-      <div class="publication">NBC News</div>
-      <p class="description">Data from 43 states showed that reports of child abuse around the nation have plunged during the first wave of the coronavirus pandemic and lockdown.</p>
-      
-    </a>
-    </div>
-
-  </div>
-
-  <div class="column filterDiv investigation">
-
-    <a href="https://www.nbcnews.com/news/us-news/he-reported-being-assaulted-cops-minneapolis-pd-why-did-nobody-n1236128" target="_blank">
-    <div class="content">
-
-      <div class="info">
-        <div class="skills left-half nomargin">📖Public records</div>
-        <div class="date right-half nomargin">August 2020</div>
-      </div>
-
-      <img class="itemimage" src="nbc-cops.jpeg" alt="Minneapolis Police Complaints" style="width:100%">
-      <h3 class="title"><span class="title">Unresolved complaints against police</span></h3>
-      <div class="publication">NBC News</div>
-      <p class="description">Hundreds of complaints filed against the Minneapolis Police Department were filed as 'inquries' and never addressed.</p>
-      
-    </a>
-    </div>
-
-  </div>
-
-  <div class="column filterDiv investigation">
-
-    <a href="https://stanforddaily.com/2018/08/28/a-closer-look-at-stanfords-leave-of-absence-policies/" target="_blank">
-    <div class="content">
-  
-      <div class="info">
-        <div class="skills left-half nomargin">📖Court records</div>
-        <div class="date right-half nomargin">August 2018</div>
-      </div>
-  
-      <img class="itemimage" src="vaden-sdaily.jpg" alt="Involuntary leaves of absence" style="width:100%">
-      <h3 class="title"><span class="title">Involuntary leaves of absence</span></h3>
-      <div class="publication">The Stanford Daily</div>
-      <p class="description">Stanford University placed students who experienced suicidal ideation or attempted suicide on a forced leave of absence, a move that some students said actually worsened their mental health.</p>
-      
-    </a>
-    </div>
-  
-  </div>
-  
-  <div class="column filterDiv local">
-
-    <a href="https://www.miamiherald.com/news/local/community/miami-dade/article233266173.html" target="_blank">
-    <div class="content">
-  
-      <div class="info">
-        <div class="skills left-half nomargin">🏃‍♀️In-person reporting, photo/video</div>
-        <div class="date right-half nomargin">August 2019</div>
-      </div>
-  
-      <img class="itemimage" src="boat-miami.jpg" alt="Abandoned boats" style="width:100%">
-      <h3 class="title"><span class="title">Abandoned boats</span></h3>
-      <div class="publication">Miami Herald</div>
-      <p class="description">Derelict boats littered the Miami River. Neighboring residents took it to city council.</p>
-      
-    </a>
-    </div>
-  
-  </div>  
-
-  <div class="column filterDiv data">
-
-    <a href="https://stanforddaily.com/2019/02/05/amid-record-number-of-transports-a-look-at-stanfords-alcohol-prevention-initiatives/" target="_blank">
-    <div class="content">
-  
-      <div class="info">
-        <div class="skills left-half nomargin">📖Public records requests</div>
-        <div class="date right-half nomargin">February 2019</div>
-      </div>
-  
-      <img class="itemimage" src="alcohol-chart.png" alt="Alcohol policies at Stanford" style="width:100%">
-      <h3 class="title"><span class="title">Record hospitalizations for drinking</span></h3>
-      <div class="publication">The Stanford Daily</div>
-      <p class="description">Stanford shifts much of the responsibility of regulating drinking on campus to student RAs. Records showed that in 2018, more students were hospitalizied for alcohol poisoning than had been in 12 years.</p>
-      
-    </a>
-    </div>
-  
-  </div>  
-
-  <div class="column filterDiv local">
-
-    <a href="https://www.miamiherald.com/news/local/environment/article234158642.html" target="_blank">
-    <div class="content">
-  
-      <div class="info">
-        <div class="date right-half nomargin">August 2019</div>
-      </div>
-  
-      <img class="itemimage" src="plastic-miami.jpeg" alt="Plastic regulation in Miami" style="width:100%">
-      <h3 class="title"><span class="title">Politics of regulating single-use plastic</span></h3>
-      <div class="publication">Miami Herald</div>
-      <p class="description">In Florida, a state pre-emption prevents local municipalities from regulating plastics, leaving big business to force small towns to roll back their plastic bans.</p>
-      
-    </a>
-    </div>
-  
-  </div>  
-
-  <div class="column filterDiv local">
-
-    <a href="https://columbianewsservice.com/2021/10/19/tensions-between-delivery-cyclists-and-upper-west-residents-mount-in-latest-e-bike-battle/?back-url=https%3A%2F%2Fcolumbianewsservice.com" target="_blank">
-    <div class="content">
-  
-      <div class="info">
-        <div class="skills left-half nomargin">🏃‍♀️In-person reporting, photo/video</div>
-        <div class="date right-half nomargin">October 2021</div>
-      </div>
-  
-      <img class="itemimage" src="ebike-delivery.jpeg" alt="Delivery workers rely on e-bikes" style="width:100%">
-      <h3 class="title"><span class="title">Delivery workers' use of e-bikes sparks tension</span></h3>
-      <div class="publication">Columbia News Service</div>
-      <p class="description">On New York City's Upper West Side, residents argue e-bikes are a danger to pedestrians. But delivery workers rely on them to make a living wage.</p>
-      
-    </a>
-    </div>
-  
-  </div>  
-
-  <div class="column filterDiv local data">
-
-    <a href="https://columbianewsservice.com/2021/12/17/nyc-daycares-and-preschools-face-hiring-challenges-compounded-by-vaccine-mandate/?back-url=https://columbianewsservice.com/" target="_blank">
-    <div class="content">
-  
-      <div class="info">
-        <div class="skills left-half nomargin">🖥️Datawrapper</div>
-        <div class="date right-half nomargin">December 2021</div>
-      </div>
-  
-      <img class="itemimage" src="childcare-chart.png" alt="Daycare labor shortage" style="width:100%">
-      <h3 class="title"><span class="title">Vaccine mandate adds staffing pressure to daycares</span></h3>
-      <div class="publication">Columbia News Service</div>
-      <p class="description">Industry employment was creeping toward pre-pandemic levels. But in small centers, the absence of even one teacher is acutely felt.</p>
-      
-    </a>
-    </div>
-  
-  </div>  
-
-  <div class="column filterDiv local">
-
-    <a href="https://stanforddaily.com/2021/05/22/tdx-appeals-disbanding-decision-citing-efforts-to-intervene-before-students-2020-death/" target="_blank">
-    <div class="content">
-  
-      <div class="info">
-        <div class="skills left-half nomargin">📖Public records requests</div>
-        <div class="date right-half nomargin">May 2021</div>
-      </div>
-  
-      <img class="itemimage" src="tdx.jpg" alt="TDX fraternity at Stanford" style="width:100%">
-      <h3 class="title"><span class="title">Fraternity points the finger at University after student death</span></h3>
-      <div class="publication">The Stanford Daily</div>
-      <p class="description">Stanford disbanded the TDX fraternity after a student died of an accidental overdose in its house. More than a year later, the organization pushed for its reinstatement, claiming they failed to intervene in a second drug incident two days before the student's death.</p>
-      
-    </a>
-    </div>
-  
-  </div>  
-
-</div>
-
-  </body>
-
-  <footer>
-    <p class='credit'>Website theme inspired by <a class='creditlink' href="adrianblancoramos.com">Adrian Blanco</a></p>
-  </footer>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+        <link rel='stylesheet' href='article-styles.css'>
+        <title>Therapy Apps</title>
+        <div class='topnav'>
+            <a href='http://juliaingram.github.io'>Return to homepage</a>
+            <a href='https://github.com/juliaingram/therapy-app-reviews'>Read about this project</a>
+        </div>
+    </head>
+    <body>
+        <div class="text-container">
+            <h1 class='headline'>Hundreds of teletherapy app users report unresponsive therapists, unfair charges</h1>
+            <img class=header-image src='talkspace-phone.png'>
+            <p class='photo-caption'>Talkspace users reported being charged but never matching with therapists (Photo: Julia Ingram)</p>
+            <p class='date'>
+                <a class='byline a' href="mailto:jmi2124@columbia.edu">By Julia Ingram</a>
+                February 20, 2022
+            <p>Teletherapy apps advertise easy access to mental healthcare. But hundreds of users report never hearing from therapists, an analysis of reviews from the Apple App Store shows.</p>
+            <p>Reviews of the apps Talkspace and Cerebral since January 2020 stood out: while their reviews include success stories of people who were helped by the apps, they sit alongside a combined estimated 500 users who reported being charged unfairly and 375 who never heard from or experienced long wait times for therapists.&nbsp;</p>
+            <p>&ldquo;No therapists. No responsiveness from anyone. They do not care,&rdquo; one user wrote about Talkspace, which matches users with licensed mental healthcare providers for video and text counseling.&nbsp;</p>
+            <div class='viz-container'>
+                <iframe title="Talkspace, Cerebral users face issues with insurance" aria-label="Stacked Bars" id="datawrapper-chart-OvAEM" src="https://datawrapper.dwcdn.net/OvAEM/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="279"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                </script>
+            </div>
+            <p>To identify the nature of the apps&rsquo; negative reviews, over 3,000 reviews for 10 teletherapy apps were scraped from the App Storel roughly 1,500 each from Talkspace and Cerebral. One- and two-star reviews were then analyzed with a machine learning algorithm that predicted whether they fell into one or more of three categories: an unfair charge, unresponsive therapist or an unsatisfactory one.&nbsp;</p>
+            <p>Again, despite these negative experiences, the majority of reviews for the 10 apps were positive. Talkspace, BetterHelp and Cerebral all have a 4.7 or higher rating on the app store.&nbsp;</p>
+            <p>But the negative reviews mirror issues in traditional forms of therapy: mismatches between patient and therapist, long wait times and expensive charges. They underscore that longstanding issues in mental healthcare aren&rsquo;t solved with an app or the option to video chat.&nbsp;</p>
+            <p><br></p>
+            <p class='footnote'>This story was done for Data Studio, a class in the Columbia Journalism School. To view the source code and read more about the project, visit the GitHub repository <a href='https://github.com/juliaingram/therapy-app-reviews'>here</a>.</p>
+        </div>
+    </body>
 </html>
