@@ -214,10 +214,7 @@ ul {
 }
 
 .itemimage {
-  /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    /*filter: grayscale(100%);*/
     transition: all 0.5s ;
-    box-shadow: 0.1em 0.1em 0.5em 0.03em black;
     height: 250px;
     object-fit: cover;
 }
