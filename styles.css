@@ -24,6 +24,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
@@ -67,7 +68,6 @@ h1 {
     font-size: 3em;
     font-weight: 600;
     letter-spacing: -0.05em;
-    /*word-spacing: -0.1em;*/
     text-align: center;
     padding-bottom: 0.3em;
 }
@@ -80,9 +80,8 @@ h1 {
 
 h3 {
   font-weight: 600;
-  margin: 1em 0 0.2em 0;
-  text-align: center;
-  height: 2.5em;
+  text-align: left;
+  padding-bottom: 0.5em;
 }
 
 span.title:hover {
@@ -118,6 +117,37 @@ p {
     clear: both;
 }
 
+.newrow {
+    float: left;
+    width: 100%;
+    /*box-sizing: border-box;*/
+    /*padding-bottom: 2em;*/
+    /*add a horizontal line*/
+    border-bottom: 0.05em solid black;
+    padding-top: 1.5em;
+}
+
+.pubtitle {
+    width: 24%;
+    float: left;
+    margin: .5em;
+    height: 200px;
+}
+
+.descrip {
+    width: 48%;
+    float: left;
+    margin: .5em;
+    font-size: 13pt;
+    font-weight: 400;
+    
+}
+
+.text-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 /* Content */
 
 .bio {
@@ -150,14 +180,12 @@ p {
 }
 
 .left-half {
-  /** background-color: #ff9e2c; **/
   position: absolute;
   left: 0px;
   width: 70%;
 }
 
 .right-half {
-  /** background-color: #b6701e; **/
   position: absolute;
   right: 0px;
   width: 30%;
@@ -166,13 +194,14 @@ p {
 .skills {
   text-align: left;
   font-size: 0.65em;
+  padding-top: 0.5em; /*edited*/
   padding-bottom: 0.5em;
 }
 
 .date {
-  text-align: right;
+  /*text-align: right;*/
   font-size: 0.65em;
-  padding-bottom: 0.5em;
+  margin-top: .75em; /*edited*/
 }
 
 .publication {
@@ -193,8 +222,6 @@ a, a:visited {
 }
 
 footer {
-  margin: 2em 0 0 0;
-  border-top: 0.05em solid black;
   text-align: right;
 }
 
@@ -213,13 +240,22 @@ ul {
   margin-top: 0.5em;
 }
 
+.nerdbox {
+  background-color: lightgray;
+  border-radius: 25px;
+  width: fit-content;
+  padding: .5em;
+  font-size: 0.65em;
+  margin-top: 2em;
+}
+
 .itemimage {
-  /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    /*filter: grayscale(100%);*/
-    transition: all 0.5s ;
-    box-shadow: 0.1em 0.1em 0.5em 0.03em black;
-    height: 250px;
-    object-fit: cover;
+  transition: all 0.5s ;
+  /*height: 250px;*/
+  height: 200px;
+  object-fit: contain;
+  width: 24%; /*edited*/
+  float: left; /*added*/
 }
 
 .itemimage:hover {
@@ -267,10 +303,6 @@ ul {
   color: white;
 }
 
-/*.btn input:checked+span {
-  background-color: #fbffee;
-}*/
-
 .filterDiv {
   float: left;
   display: none; 
@@ -279,7 +311,6 @@ ul {
 .show {
   display: block;
 }
-
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 3000px) {
