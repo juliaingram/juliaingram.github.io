@@ -250,9 +250,11 @@ ul {
 }
 
 .itemimage {
-    transition: all 0.5s ;
-    height: 250px;
-    object-fit: cover;
+  transition: all 0.5s ;
+  height: 200px;
+  object-fit: contain;
+  width: 24%;
+  float: left; 
 }
 
 .itemimage:hover {
