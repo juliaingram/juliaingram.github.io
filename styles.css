@@ -251,11 +251,10 @@ ul {
 
 .itemimage {
   transition: all 0.5s ;
-  /*height: 250px;*/
   height: 200px;
   object-fit: contain;
-  width: 24%; /*edited*/
-  float: left; /*added*/
+  width: 24%;
+  float: left; 
 }
 
 .itemimage:hover {
