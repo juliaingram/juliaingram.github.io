@@ -1,6 +1,5 @@
 html, body {
     margin: 0;
-    background: whitesmoke;
     font-family: 'Merriweather';
     font-size: 11pt;
 }
@@ -44,7 +43,7 @@ text-decoration: none;
 }
 
 .text-container {
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
 }
 
