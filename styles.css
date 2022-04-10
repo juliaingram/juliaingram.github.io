@@ -118,13 +118,23 @@ p {
 }
 
 .newrow {
-    float: left;
-    width: 100%;
+	width: 100%;
+  float: left;
     /*box-sizing: border-box;*/
     /*padding-bottom: 2em;*/
     /*add a horizontal line*/
-    border-bottom: 0.05em solid black;
-    padding-top: 1.5em;
+  border-bottom: 0.05em solid black;
+  padding-top: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .newrow {
+  flex-direction: column;
+  }
+}
+
+.column-container {
+  flex-grow: 1;
 }
 
 .pubtitle {
@@ -243,7 +253,7 @@ ul {
 .nerdbox {
   background-color: lightgray;
   border-radius: 25px;
-  width: fit-content;
+  max-width: 18em;
   padding: .5em;
   font-size: 0.65em;
   margin-top: 2em;
@@ -253,9 +263,15 @@ ul {
   transition: all 0.5s ;
   height: 200px;
   object-fit: contain;
-  width: 24%;
+  /*width: 24%;*/
   float: left; 
 }
+
+@media (max-width: 800px) {
+  .itemimage {
+      display:none;
+  }
+  }
 
 .itemimage:hover {
   -webkit-filter: none; /* Safari 6.0 - 9.0 */
@@ -303,7 +319,7 @@ ul {
 }
 
 .filterDiv {
-  float: left;
+  /*float: left;*/
   display: none; 
 }
 
