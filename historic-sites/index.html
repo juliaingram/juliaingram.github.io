@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+        <link rel='stylesheet' href='article-styles.css'>
+        <title>Historical Sites & Climate Disasters</title>
+        <div class='topnav'>
+            <a href='http://juliaingram.github.io'>Return to homepage</a>
+            <a href='https://github.com/juliaingram/daylight-saving'>Read about this project</a>n<!--REPLACE THIS LINK-->
+        </div>
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Push for year-long daylight saving time moves forward">
+        <meta property="og:url" content="https://juliaingram.github.io/daylight-saving"><!--REPLACE THIS LINK-->
+        <meta property="og:image" content="https://juliaingram.github.io/images/sunrise-sunset-map.png"><!--REPLACE THIS LINK-->
+        <meta property="article:author" content="Julia Ingram">
+        <!--REPLACE DESCRIP BELOW-->
+        <meta property="og:description" content="If the Sunshine Protection Act, which calls for year-round use of Daylight Saving Time, passes, here's what the first day of 2023 might look like, based on sunrise and sunset times on Jan. 1, 2022.">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@juliaingram_">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+        <style>
+            #scrolly {
+              position: relative;
+              padding: 1rem;
+            }
+      
+            .scrolly-overlay {
+              position: relative;
+              padding: 0;
+              max-width: 35rem;
+              margin: 0 auto;
+            }
+      
+            .sticky-thing {
+              position: -webkit-sticky;
+              position: sticky;
+              left: 0;
+              width: 100%;
+              margin: 0;
+              z-index: 0;
+              top: 0;
+              height: 100vh;
+              /* Center everything inside */
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              justify-content: center;
+            }
+
+            .sticky-thing-photos {
+              position: -webkit-sticky;
+              position: sticky;
+              left: 0;
+              width: 100%;
+              margin: 0;
+              z-index: 0;
+              top: 0;
+              height: 100vh;
+              /* Center everything inside */
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              justify-content: center;
+            }
+
+            .sticky-thing-photos img {
+                max-width: 760px;
+                max-height: 511px;
+            }
+      
+            .step {
+              margin: 0 auto 2rem auto;
+              margin-bottom: 25rem;
+              background-color: whitesmoke;
+              color: black;
+            }
+
+            .step-photos {
+              margin: 0 auto 2rem auto;
+              margin-bottom: 25rem;
+              background-color: rgb(33, 32, 32);
+              color: whitesmoke;
+            }
+      
+            .step p {
+              text-align: center;
+              padding: 1rem;
+              font-size: 1rem;
+            }
+
+            .step-photos p {
+              text-align: center;
+              padding: 1rem;
+              font-size: 1rem;
+            }
+
+            .photo-top {
+                position: relative;
+            }
+
+            .photo-next {
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: 1;
+            }
+      
+            .hidden { visibility: hidden; }
+      
+            /* When it's less than 700 pixels wide, do normal scrollytelling */
+            @media only screen and (min-width: 700px) {
+              #scrolly.side-by-side {
+                display: flex;
+              }
+      
+              #scrolly.side-by-side > div {
+                flex-basis: 0;
+                flex-grow: 1;
+                flex-shrink: 1;
+                padding: 0.75em;
+              }
+      
+              #scrolly.side-by-side .scrolly-overlay {
+                margin-top: 70vh;
+                order: 0;
+                /* Change these to adjust sizing options */
+                min-width: 15rem;
+                max-width: 20rem;
+              }
+      
+              #scrolly.side-by-side .sticky-thing {
+                order: 1;
+                flex-grow: 2;
+              }
+
+              #scrolly.side-by-side .sticky-thing-photos {
+                order: 1;
+                flex-grow: 2;
+              }
+            }
+          </style>
+          <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+    </head>
+    <body>
+        <div class="text-container">
+            <h1>Historical sites at risk of being destroyed by climate disasters</h1>
+            <p>
+                New York's Ellis Island was submerged closed for a year after Hurricane Sandy caused surges of water to flood the island home to the Statue of Liberty. Damage from the storm caused $77 million to repair, and a massive hit in revenue and wave of layoffs from the company that ferries tourists to the island.
+                <br><br>
+                Hurricane Sandy coincided with an above average tide in the Atlantic Ocean, but sea levels in the New York area have risen a foot since 1950, according to National Oceanic and Atmospheric Administration data, a recipe for worse coastal flooding. In anticipation of future storms augmented by climate change, the National Park Service’s (NPS) repairs in 2013 included elevating the island's electrical systems further above sea level. Efforts to repair environmental damage are still ongoing: in 2020, the NPS granted a $30.8 million contract to stabilize and repair the eroding seawall surrounding the island and its ferry slip. 
+                <br><br>
+                Now, over 16,500 sites &#8212; including Ellis Island and the Statue of Liberty &#8212; or roughly 18% of those listed on the <a href="https://www.nps.gov/subjects/nationalregister/index.htm">National Register of Historic Places</a>, are in the path of potential climate change disasters, according to an analysis of data published by the National Register and the Federal Emergency Management Agency (FEMA). 
+                <br><br>
+                FEMA provides a designation for the risk level of counties and census tracts to face 18 national hazards, from wildfires to hurricanes to tornados, as well as an overall risk score, called the National Risk Index. The National Risk Index for each hazard and for a county or census tract overall is <a href="https://www.fema.gov/sites/default/files/documents/fema_national-risk-index_technical-documentation.pdf">calculated</a> according to the expected annual loss a community might face by a climate event, its social vulnerability and expected resilience. 
+                <br><br>
+                To be listed on the National Register of Historic Places, a building, site, or district must meet a set of criteria to deem them worthy of preservation, as well as potential tax incentive for their maintenance.                   
+            </p>
+            <section id="scrolly" class="side-by-side">
+                <div class="sticky-thing">
+                <div class="ai2html-container">
+
+            <!-- ai2html goes below this line -->
+            
+           
+            <!-- Generated by ai2html v0.106.0 - 2022-04-17 00:43 -->
+            <!-- ai file: all_layers.svg -->
+            <style media="screen,print">
+                #g-all_layers_svg-box ,
+                #g-all_layers_svg-box .g-artboard {
+                    margin:0 auto;
+                }
+                #g-all_layers_svg-box p {
+                    margin:0;
+                }
+                #g-all_layers_svg-box .g-aiAbs {
+                    position:absolute;
+                }
+                #g-all_layers_svg-box .g-aiImg {
+                    position:absolute;
+                    top:0;
+                    display:block;
+                    width:100% !important;
+                }
+                #g-all_layers_svg-box .g-aiSymbol {
+                    position: absolute;
+                    box-sizing: border-box;
+                }
+                #g-all_layers_svg-box .g-aiPointText p { white-space: nowrap; }
+                #g-all_layers_svg-Artboard_1 {
+                    position:relative;
+                    overflow:hidden;
+                }
+
+            </style>
+
+            <div id="g-all_layers_svg-box" class="ai2html">
+
+                <!-- Artboard: Artboard_1 -->
+                <div id="g-all_layers_svg-Artboard_1" class="g-artboard" style="max-width: 428px;max-height: 384px" data-aspect-ratio="1.116" data-min-width="0">
+            <div style="padding: 0 0 89.6262% 0;"></div>
+                    <img id="g-all_layers_svg-Artboard_1-img" class="g-aiImg" alt="" src="all_layers_svg-Artboard_1.png"/>
+            <!-- Generator: Adobe Illustrator 26.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg class="g-aiImg" version="1.2" baseProfile="tiny" id="g-all_layers_svg-Artboard_1-interactions-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 428 383.6" overflow="visible" xml:space="preserve">
+            <g>
+                <g id="tornado" data-name="tornado">
+                    <path fill="#FADE64" d="M101.2,316.3v-10.68h13.773v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,304.434v-10.68h23.365v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,292.567v-10.68h17.831v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,280.701v-10.68h21.398v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,268.834v-10.68h4.304v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,245.101v-10.68h33.08v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,233.235v-10.68h34.802v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,221.369v-10.68h37.876v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,209.502v-10.68h11.56v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,197.636v-10.68h39.967v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,185.769v-10.68h43.902v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,173.903v-10.68h45.501v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,162.036v-10.68h50.051v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,150.17v-10.68h62.225v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,138.303v-10.68h71.94v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,126.437v-10.68h73.908v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,102.704v-10.68h99.61v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,90.838v-10.68h116.949v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,78.971v-10.68h109.817v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,67.105v-10.68h128.878v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,43.372v-10.68h142.159v10.68H101.2z"/>
+                    <path fill="#FADE64" d="M101.2,19.639V8.959h72.678v10.68H101.2z"/>
+                </g>
+                <g id="hurricane" data-name="hurricane">
+                    <path fill="#7ACEE6" d="M100.957,316.321v-10.68h19.922v10.68H100.957z"/>
+                    <path fill="#7ACEE6" d="M100.957,280.721v-10.68h30.129v10.68H100.957z"/>
+                    <path fill="#7ACEE6" d="M100.957,268.855v-10.68h4.304v10.68H100.957z"/>
+                    <path fill="#7ACEE6" d="M100.957,209.523v-10.68h26.932v10.68H100.957z"/>
+                    <path fill="#7ACEE6" d="M100.957,197.656v-10.68h17.831v10.68H100.957z"/>
+                    <path fill="#7ACEE6" d="M100.957,90.858v-10.68h9.346v10.68H100.957z"/>
+                    <path fill="#7ACEE6" d="M100.957,78.992v-10.68h79.442v10.68H100.957z"/>
+                    <path fill="#7ACEE6" d="M100.957,43.393v-10.68h63.086v10.68H100.957z"/>
+                </g>
+                <g id="flood" data-name="flood">
+                    <path fill="#42AAF5" d="M100.957,351.92v-10.68h10.084v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,340.054v-10.68h13.158v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,328.187v-10.68h17.462v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,316.321v-10.68h4.673v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,292.588v-10.68h24.472v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,280.721v-10.68h14.634v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,268.855v-10.68h4.304v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,256.989v-10.68h11.068v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,245.122v-10.68h20.414v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,233.256v-10.68h34.802v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,209.523v-10.68h14.511v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,197.656v-10.68h39.967v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,173.923v-10.68h45.501v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,162.057v-10.68h50.051v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,150.191v-10.68h62.225v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,138.324v-10.68h71.94v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,126.458v-10.68h73.908v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,114.591v-10.68h52.019v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,102.725v-10.68h52.51v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,90.858v-10.68h116.949v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,78.992v-10.68h77.966v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,67.126v-10.68h128.878v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,55.259v-10.68h23.857v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,43.393v-10.68h150.276v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,31.526v-10.68h159.13v10.68H100.957z"/>
+                    <path fill="#42AAF5" d="M100.957,19.66V8.98h174.502v10.68H100.957z"/>
+                </g>
+                <g id="wildfire" data-name="wildfire">
+                    <path fill="#F57E42" d="M100.957,351.92v-10.68h10.084v10.68H100.957z"/>
+                    <path fill="#F57E42" d="M100.957,340.054v-10.68h3.812v10.68H100.957z"/>
+                    <path fill="#F57E42" d="M100.957,328.187v-10.68h17.462v10.68H100.957z"/>
+                    <path fill="#F57E42" d="M100.957,292.588v-10.68h6.026v10.68H100.957z"/>
+                    <path fill="#F57E42" d="M100.957,114.591v-10.68h8.608v10.68H100.957z"/>
+                    <path fill="#F57E42" d="M100.957,78.992v-10.68h80.549v10.68H100.957z"/>
+                    <path fill="#F57E42" d="M100.957,31.526v-10.68h163.311v10.68H100.957z"/>
+                    <path fill="#F57E42" d="M100.957,19.66V8.98h186.676v10.68H100.957z"/>
+                </g>
+            </g>
+            <style>
+            #g-all_layers_svg-Artboard_1-interactions-img rect, #g-all_layers_svg-Artboard_1-interactions-img circle, #g-all_layers_svg-Artboard_1-interactions-img path, #g-all_layers_svg-Artboard_1-interactions-img line, #g-all_layers_svg-Artboard_1-interactions-img polyline, #g-all_layers_svg-Artboard_1-interactions-img polygon { vector-effect: non-scaling-stroke; }
+            </style>
+            </svg>
+
+                </div>
+
+            </div>
+
+            <!-- End ai2html - 2022-04-17 00:43 -->
+
+
+            <!-- ai2html goes above this line -->
+
+                </div>
+                </div>
+            <!--SCROLLY CHART-->
+                <div class="scrolly-overlay">
+                    <div class="step" id="step-zero">
+                        <p>Twenty-seven states have counties designated as being at "very high" or "relatively high" risk of facing environmental hazards, according to FEMA's National Risk Index, some with close to or more than 1,000 historic sites residing in those places. .</p>
+                    </div>
+                    <div class="step" id="step-one">
+                        <p>Dry, West Coast states like California and Arizona have the most sites in counties facing wildfire risk, but even counties near forests in Florida face fire risk.</p>
+                    </div>
+                    <div class="step" id="step-two">
+                        <p>Most historic places in FEMA designated high-risk hazard zones are in danger of either coastal or riverine flooding. For some states, all of their historic places are at risk of facing floods amid rising sea levels.</p>
+                    </div>
+                    <div class="step" id="step-three">
+                        <p>Some historic sites in counties at high flood risk also see high hurricane risk, especially those along the Gulf of Mexico. Hurricane Katrina destroyed at least 23 historic sites, according to an analysis of notices to withdraw sites from the National Register posted in the National Archive. </p>
+                    </div>
+                    <div class="step" id="step-four">
+                        <p>Midwestern and Southern states face the highest tornado risk and have the most historic sites in their potential paths. The link between tornados and climate change isn't as well established as it is between other natural disasters, in part due to limited data and inconsistency in climate models, according to NOAA's website.</p>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+            
+            /* Scrollytelling code goes under here */
+            //on load, display overall risk chart
+            d3.selectAll("[data-name='wildfire']").classed('hidden', true)
+            d3.selectAll("[data-name='flood']").classed('hidden', true)
+            d3.selectAll("[data-name='hurricane']").classed('hidden', true)
+            d3.selectAll("[data-name='tornado']").classed('hidden', true)
+
+            //reverse step one for scrolling up
+            d3.select("#step-zero").on('stepin', function(e) { 
+                d3.selectAll("[data-name='wildfire']").classed('hidden', true)
+            })
+
+            //step one, show wildfires
+            d3.select("#step-one").on('stepin', function(e) { 
+                d3.selectAll("[data-name='wildfire']").classed('hidden', false)
+                //reverse step two for scrolling up
+                d3.selectAll("[data-name='flood']").classed('hidden', true)
+            })
+
+            //step two, show floods
+            d3.select("#step-two").on('stepin', function(e) { 
+                d3.selectAll("[data-name='wildfire']").classed('hidden', true)
+                d3.selectAll("[data-name='flood']").classed('hidden', false)
+                //reverse step three for scrolling up
+                d3.selectAll("[data-name='hurricane']").classed('hidden', true)
+            })
+            
+            //step three, show hurricanes
+            d3.select("#step-three").on('stepin', function(e) { 
+                d3.selectAll("[data-name='flood']").classed('hidden', true)
+                d3.selectAll("[data-name='hurricane']").classed('hidden', false)
+                //reverse step four for scrolling up
+                d3.selectAll("[data-name='tornado']").classed('hidden', true)
+            })
+            
+            //step four, show tornados
+            d3.select("#step-four").on('stepin', function(e) {
+                d3.selectAll("[data-name='hurricane']").classed('hidden', true) 
+                d3.selectAll("[data-name='tornado']").classed('hidden', false)
+            })
+
+            </script>
+
+            <script>
+                const scroller = scrollama();
+
+                scroller
+                    .setup({
+                        step: "#scrolly .scrolly-overlay .step",
+                        offset: 0.75,
+                        debug: false
+                    })
+                    .onStepEnter(function({ element, index, direction}) {
+                        const event = new CustomEvent('stepin', { detail: { direction: direction } })
+                        element.dispatchEvent(event);
+                    })
+                    .onStepExit(function({ element, index, direction }) {
+                        const event = new CustomEvent('stepout', { detail: { direction: direction } })
+                        element.dispatchEvent(event);
+                    });
+
+                window.addEventListener("resize", scroller.resize);
+            </script>
+            <p>
+                Proactive efforts to preserve historic sites will be needed, activists and scientists say. Efforts to protect sites from potential climate-caused damage have not begun in many places, a 2014 <a href="'https://www.ucsusa.org/resources/national-landmarks-risk">report</a> by the Union of Concerned Scientists examining 30 historic sites found. 
+                <br><br>
+                Some sites have, the study found, like Ellis Island, which continues those efforts today, and the Cape Hatteras Lighthouse in the Outer Banks of North Carolina — all 4,800 tons of which was physically relocated further inland to protect it from coastal flooding.
+                <br><br>
+                Other places are taking more creative approaches to historic preservation. In St. Augustine, Florida, which faces rising tides and has spent millions on preventing floods, the NPS is partnering with the University of Florida's Center for Digital Heritage to replicate historic sites in a virtual reality setting, <a href="https://www.npr.org/2021/12/08/1062320033/digital-tools-can-preserve-historic-sites-threatened-by-climate-change-effects">NPR reported</a>.
+            </p>
+       <!-- </div> text container div ending-->
+            <!--SCROLLY PHOTOS-->
+            <section id="scrolly">
+                <div class="sticky-thing-photos">
+                    <img id='big-basin-before' src="big-basin-before.png" alt="The Big Basin Redwoods State Park in Santa Cruz County, California, headquarters administration building." class="photo-top hidden">
+                    <img id='big-basin-after' src="big-basin-after.png" alt="The remains of headquarters administration after it burned in August 2020." class="photo-next hidden" style="opacity:0">
+                    <img id='karnofsky-before' src="karnofsky-before.png" alt="The Karnofsky Tailor Shop and Residence, a building in New Orleans, Louisiana tied to Louis Armstrong." class="photo-next hidden">
+                    <img id='karnofsky-after' src="karnofsky-after.png" alt="The rubble after the Karnofsky building was leveled by floods in Hurricane Ida." class="photo-next hidden" style="opacity:0">
+                </div>
+                <div class="scrolly-overlay">
+                    <div class="step-photos" id="step-zero-photos">
+                        <p>Big Basin Redwoods State Park's administrative headquarters in &#8212; the greeting point for the Northern California park's visitors &#8212; was built in 1936 by Former President Franklin D. Roosevelt's Civilian Conservation Corps. It's built from local materials, including redwood logs, and exemplifies the "Park Rustic" style of architecture in California's state parks, according to its <a href="https://npgallery.nps.gov/NRHP/GetAsset/9cb90e1c-615a-40ff-87d6-0c1cac0c2861">registration</a> form for listing in the National Register of Historic Places. Its listing was confirmed in 2015. </p>
+                    </div>
+                    <div class="step-photos" id="step-one-photos">
+                        <p>But only five years later, the building was burnt to the ground in the CZU Lightning Complex in August 2020, which destroyed the historic headquarters, ranger office, nature museum and more. A year after the fire, the wreckage, including nearly 1,500 other structures and 15,000 trees, was cleared and rebuilding began, the <a herf="https://enewspaper.mercurynews.com/?token=0bef1c6b2f70c44a56ae14194df65a84_61155dbe_64f5_0&selDate=20210812&goTo=A01&artid=1">Mercury News reported.</a> </p>
+                    </div>
+                    <div class="step-photos" id="step-two-photos">
+                        <p>A two-story building in New Orleans once was home to the Karnofsky Tailor Shop and residence, where a Jewish family gave Louis Armstrong a second home when he was young and even loaned him the money for his first cornet, according to the <a href='https://www.nps.gov/places/karnofsky-tailor-shop-and-residence.htm'>NPS</a>. The building's National Register listing form described its location as a "once vibrant African-American commercial and entrainment district [that] is now a sea of surface parking lots punctuated by a few remaining buildings."" </p>
+                    </div>
+                    <div class="step-photos" id="step-three-photos">
+                        <p>The Karnofsky building was destroyed in August 2021 by flooding in Hurricane Ida, a category three storm, reducing it to a pile of rubble. In 2019, a real estate firm has purchased part of the block, with plans to restore and repurpose it to better reflect its history, the <a href="https://www.nola.com/news/article_ae1dadad-fe52-547b-9c5e-93344996e4e9.html">New Orleans Times-Picayune reported.</a></p>
+                    </div>
+                    </div>
+            </section>
+
+            <script>
+            
+            /* Scrollytelling code goes under here */
+            //on load, display big basin before photo
+            d3.select('#big-basin-before').classed('hidden', false)
+
+            //reverse step one for scrolling up
+            d3.select("#step-zero-photos").on('stepin', function(e) { 
+                d3.select('#big-basin-before').classed('hidden', false)
+                d3.select('#big-basin-after').classed('hidden', true)
+            })
+
+            //step one, show big basin after
+            d3.select("#step-one-photos").on('stepin', function(e) { 
+                d3.select('#big-basin-before').classed('hidden', false).transition().duration(1500).ease(d3.easeLinear).style("opacity", 0)
+                d3.select('#big-basin-after').classed('hidden', false).transition().duration(1500).ease(d3.easeLinear).style("opacity", 1)
+                //reverse step two for scrolling up
+                d3.select('#karnofsky-before').classed('hidden', true)
+            })
+
+            //step two, show karnofsky before
+            d3.select("#step-two-photos").on('stepin', function(e) { 
+                d3.select('#karnofsky-before').classed('hidden', false)
+                d3.select('#big-basin-after').classed('hidden', true)
+                //reverse step three for scrolling up
+                d3.select('#karnofsky-after').classed('hidden', true)
+            })
+            
+            //step three, show karnofsky after
+            d3.select("#step-three-photos").on('stepin', function(e) { 
+                d3.select('#karnofsky-before').classed('hidden', false).transition().duration(1500).ease(d3.easeLinear).style("opacity", 0)
+                d3.select('#karnofsky-after').classed('hidden', false).transition().duration(1500).ease(d3.easeLinear).style("opacity", 1)
+            })
+
+            </script>
+
+            <script>
+                const scrollerPhotos = scrollama();
+
+                scrollerPhotos
+                    .setup({
+                        step: "#scrolly .scrolly-overlay .step-photos",
+                        offset: 0.75,
+                        debug: false
+                    })
+                    .onStepEnter(function({ element, index, direction}) {
+                        const event = new CustomEvent('stepin', { detail: { direction: direction } })
+                        element.dispatchEvent(event);
+                    })
+                    .onStepExit(function({ element, index, direction }) {
+                        const event = new CustomEvent('stepout', { detail: { direction: direction } })
+                        element.dispatchEvent(event);
+                    });
+
+                window.addEventListener("resize", scrollerPhotos.resize);
+            </script>
+
+
+            <!-- ai2html resizer script -->
+
+        <script type="text/javascript">
+        (function() {
+            // only want one resizer on the page
+            if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+            document.documentElement.className += " g-resizer-v3-init";
+            // require IE9+
+            if (!("querySelector" in document)) return;
+            function resizer() {
+                var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+                    widthById = {};
+                elements.forEach(function(el) {
+                    var parent = el.parentNode,
+                        width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                        minwidth = el.getAttribute("data-min-width"),
+                        maxwidth = el.getAttribute("data-max-width");
+                    widthById[parent.id] = width;
+
+                    if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                        el.style.display = "block";
+                    } else {
+                        el.style.display = "none";
+                    }
+                });
+                try {
+                    if (window.parent && window.parent.$) {
+                        window.parent.$("body").trigger("resizedcontent", [window]);
+                    }
+                    if (window.require) {
+                        require(['foundation/main'], function() {
+                            require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                                AppCommunicator.triggerResize();
+                            });
+                        });
+                    }
+                } catch(e) { console.log(e); }
+            }
+
+            document.addEventListener('DOMContentLoaded', resizer);
+            // feel free to replace throttle with _.throttle, if available
+            window.addEventListener('resize', throttle(resizer, 200));        
+
+            function throttle(func, wait) {
+                // from underscore.js
+                var _now = Date.now || function() { return new Date().getTime(); },
+                    context, args, result, timeout = null, previous = 0;
+                var later = function() {
+                    previous = _now();
+                    timeout = null;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                };
+                return function() {
+                    var now = _now(), remaining = wait - (now - previous);
+                    context = this;
+                    args = arguments;
+                    if (remaining <= 0 || remaining > wait) {
+                        if (timeout) {
+                            clearTimeout(timeout);
+                            timeout = null;
+                        }
+                        previous = now;
+                        result = func.apply(context, args);
+                        if (!timeout) context = args = null;
+                    } else if (!timeout && options.trailing !== false) {
+                        timeout = setTimeout(later, remaining);
+                    }
+                    return result;
+                };
+            }
+
+            
+        })();
+        </script>
+            <p>Photo credit (in the order they appear): National Register of Historic Places Digital Archive, Ian Bornarth (California Department of Parks and Recreation), Wikimedia Commons, Alan Smason (Jewish Telegraphic Agency)</p>
+            <p class='footnote'>This story was done for Data Studio, a class in the Columbia Journalism School. To view the source code and read more about the project, visit the GitHub repository <a href='https://github.com/juliaingram/daylight-saving'>here</a>.</p>
+        </div>        
+    </body>
+</html>
