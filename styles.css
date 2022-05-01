@@ -263,7 +263,7 @@ ul {
   transition: all 0.5s ;
   height: 200px;
   object-fit: contain;
-  /*width: 24%;*/
+  max-width: 200px;
   float: left; 
 }
 
