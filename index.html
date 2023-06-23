@@ -17,21 +17,21 @@
         <a href="mailto:julia.ingram@columbia.edu" target="_top" title="E-mail"><span class="title"><i class="fas fa-envelope"></i></span><a>
       </div>
       
-      <p class="bio">I'm a journalist pursuing a master's in data journalism at Columbia Journalism School and a recent graduate of Stanford University. I've written for The Washington Post, NBC News, the Miami Herald and The Stanford Daily. Read some of my work below.</span></p>
+      <p class="bio">I'm a data journalist and reporting fellow at PBS FRONTLINE. I graduated last year with a master's in data journalism at Columbia Journalism School and in 2021 with a bachelor's in English from Stanford University. Read some of my work below.</span></p>
       
       <!-- buttons -->
 
-          <label class="btn" onclick="filterSelection('data')">
-            <input type="radio" value="data">
-            <span>Data-driven</span>
+          <label class="btn" onclick="filterSelection('analysis')">
+            <input type="radio" value="analysis">
+            <span>Analysis</span>
           </label>
-          <label class="btn" onclick="filterSelection('investigation')">
-            <input type="radio" value="investigation">
-            <span>Investigations</span>
+          <label class="btn" onclick="filterSelection('graphics')">
+            <input type="radio" value="graphics">
+            <span>Graphics</span>
           </label>
-          <label class="btn" onclick="filterSelection('local')">
-            <input type="radio" name="stuff" value="local">
-            <span>Local Enterprise</span>
+          <label class="btn" onclick="filterSelection('writing')">
+            <input type="radio" name="stuff" value="writing">
+            <span>Writing</span>
           </label>
           <span class="btn reset" id='all' onclick="filterSelection('all')"><span>All</span></span>
 
@@ -39,8 +39,119 @@
       </div>
 
       <!-- Portfolio Gallery Grid -->
-      <div class="newrow filterDiv data">
+      <div class="newrow filterDiv analysis writing">
+        <a href="https://mindsitenews.org/2022/07/28/as-mental-health-startup-cerebral-staggers-adhd-patients-scramble-for-meds/ " target="_blank">
+        <div class="pubtitle">MindSite News
+          <div class="date">July 2022</div> 
+          <div class='nerdbox'>Python, machine learning</div>
+        </div>
+          <div class="descrip">
+            <h3>ADHD patients left hanging as startup Cerebral staggers</h3>
+            After analyzing App Store reviews to identify problems users of telehealth app Cerebral faced, I interviewed ADHD patients who were suddenly unable to get their medications after the company abruptly stopped prescribing controlled substances. 
+          </div>
+          <img class="itemimage" src="images/cerebral.jpg" alt="Teletherapy app Cerebral previously prescribed controlled substances virtually">          
+        </a>
+        </div>
 
+      <div class="newrow filterDiv analysis">
+        <a href="https://github.com/juliaingram/nys-pharmacies-masters-project" target="_blank">
+        <div class="pubtitle">Columbia Journalism School
+          <div class="date">August 2022</div> 
+          <div class='nerdbox'>Web scraping, pandas, geopandas, geocoding API, QGIS</div>
+        </div>
+          <div class="descrip">
+            <h3>Areas in New York facing physician shortages lose independent pharmacies as financial pressures rise</h3>
+            Low drug reimbursement rates and high fees set by pharmacy benefit managers are threatening independent pharmacies in areas of New York State already facing primary care shortages. I collected data on pharmacy closures by scraping a state website and developed a reliable way of classifying the pharmacies as independent or not. I also geocoded the data and performed a spatial analysis to identify the rate of closures in areas federally designated to be facing a primary care shortage.
+          </div>
+          <img class="itemimage" src="images/pbms.jpeg" alt="CVS Caremark, one of three pharmacy benefit managers that dominate the market, also owns the major pharmacy chain.">          
+        </a>
+        </div>
+
+      <div class="newrow filterDiv graphics">
+        <a href="https://pointsunknown.nyc/final-projects/JSchool-Summer-2022/Climate-2/index.html" target="_blank">
+        <div class="pubtitle">Columbia Journalism School
+          <div class="date">August 2022</div> 
+          <div class='nerdbox'>Mapbox, scrollytelling, Google Earth studio, altair, Adobe Illustrator</div>
+        </div>
+          <div class="descrip">
+            <h3>Critical habitats in question</h3>
+            At least three endangered species were denied "critical habitat" status, which would've protected their natual habitats from human development, as a result of Trump-era policies. This visual story explains the policies and their impact. 
+          </div>
+          <img class="itemimage" src="images/habitats.gif" alt="An airport plan threatens an endangered bumblebee's habitat">          
+        </a>
+        </div>
+
+      <div class="newrow filterDiv analysis writing">
+        <a href="https://www.verywellhealth.com/maternal-mortality-abortion-ban-5442957" target="_blank">
+        <div class="pubtitle">Verywell Health
+          <div class="date">June 2022</div> 
+          <div class='nerdbox'>Pandas, Datawrapper</div>
+        </div>
+          <div class="descrip">
+            <h3>Examining the relationship between abortion policies and maternal mortality</h3>
+            Published as the Dobbs decision came out, my analysis of CDC data for this story found statistically significant differences in average maternal mortality among states with and without certain abortion restrictions.
+          </div>
+          <img class="itemimage" src="images/maternal-mortality.png" alt="Chart displaying differences in maternal mortality among states with and without abortion restrictions.">          
+        </a>
+        </div>
+
+      <div class="newrow filterDiv analysis">
+        <a href="https://www.washingtonpost.com/business/interactive/2021/fossil-fuel-climate-bonus/" target="_blank">
+          <div class="pubtitle">The Washington Post
+            <div class="date">October 2021</div> 
+            <div class='nerdbox'>Spreadsheets, SEC filings</div>
+          </div>
+          <div class="descrip">
+            <h3>Calculating oil CEOs' "climate bonuses"</h3>
+            CEOs of fossil fuel companies make millions for meeting climate targets despite continuing to cause environmental damage, a colleague and I found after looking through company filings. Sen. Elizabeth Warren called for an SEC investigation into the companies executive compensation after therapists story was published.
+          </div>
+          <img class="itemimage" src="images/climatepay.png" alt="Climate bonuses">          
+        </a>
+        </div>
+
+      <div class="newrow filterDiv graphics">
+        <a href="https://github.com/jmingram1/zocdoc-scrape" target="_blank">
+          <div class="pubtitle">Columbia Journalism School
+            <div class="date">December 2021</div> 
+            <div class='nerdbox'>Web scraping, Mapbox GL JS</div>
+          </div>
+          <div class="descrip">
+            <h3>Mapping primary care providers on Zocdoc</h3>
+            An interactive map showing disparities in access to care on the online platform Zocdoc in New York City. The map displays data I scraped from Zocdoc's website.
+          </div>
+          <img class="itemimage" src="images/zocdoc-map.gif" alt="Zocdoc map">          
+        </a>
+        </div>
+
+      <div class="newrow filterDiv analysis writing">
+        <a href="https://www.washingtonpost.com/business/2021/08/01/tsunami-deferred-debt-is-about-hit-homeowners-no-longer-protected-by-foreclosure-moratorium/" target="_blank">
+          <div class="pubtitle">The Washington Post
+            <div class="date">August 2021</div> 
+            <div class='nerdbox'>Python, spreadsheets</div>
+          </div>
+          <div class="descrip">
+            <h3>Mortgage delinquency data</h3>
+            Over 2 million homeowners were in debt ahead of the national foreclosure moratorium's expiration. Low-income borrowers and borrowers of color were most impacted.
+          </div>
+          <img class="itemimage" src="images/forbearance.jpeg" alt="Mortgage delinquency">          
+        </a>
+        </div>
+
+        <div class="newrow filterDiv graphics">
+          <a href="https://juliaingram.github.io/daylight-saving" target="_blank">
+            <div class="pubtitle">Columbia Journalism School
+              <div class="date">March 2022</div> 
+              <div class='nerdbox'>Web scraping, plotnine, QGIS, Adobe Illustrator, ai2html</div>
+            </div>
+            <div class="descrip">
+              <h3>Push for year-round daylight saving time moves forward</h3>
+              A look at state bills to end biannual clock-switching, and a map of when sunrise and sunset might happen if the U.S. moved to year-round daylight time. 
+            </div>
+            <img class="itemimage" src="images/sunrise-sunset-map.png" alt="Sunrise map on daylight time">          
+          </a>
+          </div>
+
+      <div class="newrow filterDiv analysis graphics">
         <a href="https://juliaingram.github.io/historic-sites/" target="_blank">
         <div class="pubtitle">Columbia Journalism School
           <div class="date">April 2022</div> 
@@ -54,7 +165,7 @@
         </a>
         </div>
 
-        <div class="newrow filterDiv data">
+ <!--        <div class="newrow filterDiv analysis graphics">
 
           <a href="https://juliaingram.github.io/ny-pharmacy-access/" target="_blank">
           <div class="pubtitle">Columbia Journalism School
@@ -67,9 +178,9 @@
             </div>
             <img class="itemimage" src="ny-pharmacy-access/map.png" alt="Big Basin Redwood State Park's Administrative Headquarters, destroyed by the CZU Lighting Complex fire in 2020.">          
           </a>
-          </div>
+          </div> -->
 
-      <div class="newrow filterDiv data">
+      <div class="newrow filterDiv graphics">
 
         <a href="https://juliaingram.github.io/ca-utility-fires" target="_blank">
         <div class="pubtitle">Columbia Journalism School
@@ -85,83 +196,22 @@
         </a>
         </div>
 
+        <div class="newrow filterDiv analysis">
 
-      <div class="newrow filterDiv data">
+          <a href="https://juliaingram.github.io/therapy-apps" target="_blank">
+            <div class="pubtitle">Columbia Journalism School
+              <div class="date">February 2022</div> 
+              <div class='nerdbox'>Scraping, Machine Learning, HTML, CSS</div>
+            </div>
+            <div class="descrip">
+              <h3>Analyzing therapy app reviews</h3>
+              I built a machine learning classifer to analyze app store reviews and find that hundreds of users of the apps TalkSpace and Cerebral feel unfairly charged or deal with unresponsive therapists.
+            </div>
+            <img class="itemimage" src="images/talkspace-cerebral-bar.png" alt="Therapy apps">          
+          </a>
+          </div>
 
-        <a href="https://juliaingram.github.io/therapy-apps" target="_blank">
-          <div class="pubtitle">Columbia Journalism School
-            <div class="date">February 2022</div> 
-            <div class='nerdbox'>Scraping, Machine Learning, HTML, CSS</div>
-          </div>
-          <div class="descrip">
-            <h3>Analyzing therapy app reviews</h3>
-            I built a machine learning classifer to analyze app store reviews and find that hundreds of users of the apps TalkSpace and Cerebral feel unfairly charged or deal with unresponsive therapists.
-          </div>
-          <img class="itemimage" src="images/talkspace-cerebral-bar.png" alt="Therapy apps">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv data">
-
-        <a href="https://www.washingtonpost.com/business/2021/08/01/tsunami-deferred-debt-is-about-hit-homeowners-no-longer-protected-by-foreclosure-moratorium/" target="_blank">
-          <div class="pubtitle">The Washington Post
-            <div class="date">August 2021</div> 
-            <div class='nerdbox'>Python, spreadsheets</div>
-          </div>
-          <div class="descrip">
-            <h3>Mortgage delinquency data</h3>
-            Over 2 million homeowners were in debt ahead of the national foreclosure moratorium's expiration. Low-income borrowers and borrowers of color were most impacted.
-          </div>
-          <img class="itemimage" src="images/forbearance.jpeg" alt="Mortgage delinquency">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv data">
-
-        <a href="https://github.com/jmingram1/zocdoc-scrape" target="_blank">
-          <div class="pubtitle">Columbia Journalism School
-            <div class="date">December 2021</div> 
-            <div class='nerdbox'>Web scraping, Mapbox GL JS</div>
-          </div>
-          <div class="descrip">
-            <h3>Mapping primary care providers on Zocdoc</h3>
-            An interactive map showing disparities in access to care on the online platform Zocdoc in New York City. The map displays data I scraped from Zocdoc's website.
-          </div>
-          <img class="itemimage" src="images/zocdoc-map.gif" alt="Zocdoc map">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv data">
-
-        <a href="https://juliaingram.github.io/daylight-saving" target="_blank">
-          <div class="pubtitle">Columbia Journalism School
-            <div class="date">March 2022</div> 
-            <div class='nerdbox'>Web scraping, plotnine, QGIS, Adobe Illustrator, ai2html</div>
-          </div>
-          <div class="descrip">
-            <h3>Push for year-round daylight saving time moves forward</h3>
-            A look at state bills to end biannual clock-switching, and a map of when sunrise and sunset might happen if the U.S. moved to year-round daylight time. 
-          </div>
-          <img class="itemimage" src="images/sunrise-sunset-map.png" alt="Sunrise map on daylight time">          
-        </a>
-        </div>
-      
-      <div class="newrow filterDiv data investigation">
-
-        <a href="https://www.washingtonpost.com/business/interactive/2021/fossil-fuel-climate-bonus/" target="_blank">
-          <div class="pubtitle">The Washington Post
-            <div class="date">October 2021</div> 
-            <div class='nerdbox'>Spreadsheets, SEC filings</div>
-          </div>
-          <div class="descrip">
-            <h3>Calculating oil CEOs' "climate bonuses"</h3>
-            CEOs of fossil fuel companies make millions for meeting climate targets despite continuing to cause environmental damage, a colleague and I found after looking through company filings. Sen. Elizabeth Warren called for an SEC investigation into the companies executive compensation after therapists story was published.
-          </div>
-          <img class="itemimage" src="images/climatepay.png" alt="Climate bonuses">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv data">
+      <div class="newrow filterDiv analysis">
 
         <a href="https://www.nbcnews.com/health/kids-health/has-child-abuse-surged-under-covid-19-despite-alarming-stories-n1234713" target="_blank">
           <div class="pubtitle">NBC News
@@ -176,7 +226,7 @@
         </a>
         </div>
 
-      <div class="newrow filterDiv data">
+      <div class="newrow filterDiv analysis graphics">
 
         <a href="https://www.verywellhealth.com/analysis-has-omicron-peaked-5218085" target="_blank">
           <div class="pubtitle">Verywell Health
@@ -191,7 +241,7 @@
         </a>
         </div>
       
-      <div class="newrow filterDiv data">
+      <div class="newrow filterDiv analysis graphics">
 
         <a href="https://juliaingram.github.io/citibike" target="_blank">
           <div class="pubtitle">Columbia Journalism School
@@ -205,8 +255,8 @@
           <img class="itemimage" src="images/citibike-thames.png" alt="Citi Bike Ridership">          
         </a>
         </div>
-      
-      <div class="newrow filterDiv investigation">
+      <!--
+      <div class="newrow filterDiv writing">
 
         <a href="https://www.nbcnews.com/news/us-news/he-reported-being-assaulted-cops-minneapolis-pd-why-did-nobody-n1236128" target="_blank">
           <div class="pubtitle">NBC News
@@ -219,9 +269,9 @@
           </div>
           <img class="itemimage" src="images/nbc-cops.jpeg" alt="Police misconduct complaints">          
         </a>
-        </div>
+        </div> -->
 
-        <div class="newrow filterDiv investigation">
+        <div class="newrow filterDiv writing">
 
           <a href="https://stanforddaily.com/2018/08/28/a-closer-look-at-stanfords-leave-of-absence-policies/" target="_blank">
             <div class="pubtitle">The Stanford Daily
@@ -236,7 +286,7 @@
           </a>
           </div>
 
-        <div class="newrow filterDiv local">
+        <div class="newrow filterDiv writing">
 
           <a href="https://www.miamiherald.com/news/local/community/miami-dade/article233266173.html" target="_blank">
             <div class="pubtitle">Miami Herald
@@ -251,7 +301,7 @@
           </a>
           </div>
 
-        <div class="newrow filterDiv data">
+        <div class="newrow filterDiv analysis writing">
 
           <a href="https://stanforddaily.com/2019/02/05/amid-record-number-of-transports-a-look-at-stanfords-alcohol-prevention-initiatives/" target="_blank">
             <div class="pubtitle">The Stanford Daily
@@ -266,7 +316,7 @@
           </a>
           </div>
 
-      <div class="newrow filterDiv local">
+      <div class="newrow filterDiv writing">
 
         <a href="https://www.miamiherald.com/news/local/environment/article234158642.html" target="_blank">
           <div class="pubtitle">Miami Herald
@@ -280,7 +330,7 @@
         </a>
         </div>
 
-      <div class="newrow filterDiv local">
+      <div class="newrow filterDiv writing">
 
         <a href="https://columbianewsservice.com/2021/10/19/tensions-between-delivery-cyclists-and-upper-west-residents-mount-in-latest-e-bike-battle/?back-url=https%3A%2F%2Fcolumbianewsservice.com" target="_blank">
           <div class="pubtitle">Columbia News Service
@@ -294,7 +344,7 @@
         </a>
         </div>
         
-      <div class="newrow filterDiv local data">
+      <div class="newrow filterDiv local analysis writing">
 
         <a href="https://columbianewsservice.com/2021/12/17/nyc-daycares-and-preschools-face-hiring-challenges-compounded-by-vaccine-mandate/?back-url=https://columbianewsservice.com/" target="_blank">
           <div class="pubtitle">Columbia News Service
@@ -308,7 +358,7 @@
         </a>
         </div>
 
-        <div class="newrow filterDiv local">
+        <div class="newrow filterDiv writing">
 
           <a href="https://stanforddaily.com/2021/05/22/tdx-appeals-disbanding-decision-citing-efforts-to-intervene-before-students-2020-death/" target="_blank">
             <div class="pubtitle">The Stanford Daily
@@ -329,7 +379,4 @@
 
   </body>
 
-  <footer>
-    <p class='credit'>Website theme inspired by <a class='creditlink' href="adrianblancoramos.com">Adrian Blanco</a></p>
-  </footer>
 </html>
