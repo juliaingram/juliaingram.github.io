@@ -1,424 +1,285 @@
 <!doctype html>
 <html>
   <head>
-    <title>Julia Ingram's portfolio</title>
+    <title>Julia Ingram | Data Journalist</title>
     <link rel='stylesheet' href='styles.css'>
     <script src="https://kit.fontawesome.com/9773687779.js" crossorigin="anonymous"></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <script src='filter-stories.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
-  <body class="text-container">
-    <h1>Julia Ingram</h1>
-    <div class="rrss">
-        <a href="https://github.com/jmingram1" title="Github" target="_blank"><span class="title"><i class="fab fa-github"></i></span><a>
-        <a href="https://www.linkedin.com/in/julia-ingram" title="Linkedin" target="_blank"><span class="title"><i class="fab fa-linkedin-in"></i></span><a>
-        <a href="https://twitter.com/juliaingram_" title="Twitter" target="_blank"><span class="title"><i class="fab fa-twitter"></i></span><a>
-        <a href="mailto:julia.ingram@columbia.edu" target="_top" title="E-mail"><span class="title"><i class="fas fa-envelope"></i></span><a>
-      </div>
-      
-      <p class="bio">I'm a data journalist and reporting fellow at PBS FRONTLINE. I graduated last year with a master's in data journalism at Columbia Journalism School and in 2021 with a bachelor's in English from Stanford University. Read some of my work below, and see other stories I've written for FRONTLINE in the past year <a href="https://www.pbs.org/wgbh/frontline/person/julia-ingram/">here.</a></span></p>
-      
-      <!-- buttons -->
+  <body>
+    <div class="container">
+      <header>
+        <h1>Julia Ingram</h1>
+        <p class="bio">I'm a data journalist at CBS News Confirmed, where I produce enterprise data journalism, stories powered by open-source intelligence, and data-driven fact checks.  I use technical tools and code to report accountability stories. Previously, I was a reporting fellow at PBS FRONTLINE and a freelance journalist. I hold a bachelor's degree in English from Stanford University and a master's in data journalism from Columbia Journalism School.</p>
+        <div class="social-links">
+          <a href="https://github.com/juliaingram" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/julia-ingram" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/juliaingram_" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:juingram@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </header>
 
-          <label class="btn" onclick="filterSelection('analysis')">
-            <input type="radio" value="analysis">
-            <span>Analysis</span>
-          </label>
-          <label class="btn" onclick="filterSelection('graphics')">
-            <input type="radio" value="graphics">
-            <span>Graphics</span>
-          </label>
-          <label class="btn" onclick="filterSelection('writing')">
-            <input type="radio" name="stuff" value="writing">
-            <span>Writing</span>
-          </label>
-          <span class="btn reset" id='all' onclick="filterSelection('all')"><span>All</span></span>
+      <main>
+        <!-- CBS Work -->
+        <section class="work-section">
+          <div class="section-header">
+            <h2 class="section-title">CBS News</h2>
+            <nav class="jump-nav">
+              <span class="jump-label">Jump to:</span>
+              <a href="#immigration">Immigration</a>
+              <a href="#doge">DOGE / Elon Musk</a>
+              <a href="#other-cbs">Other</a>
+            </nav>
+          </div>
 
-      </p>
-      </div>
+          <!-- Immigration Coverage -->
+          <h3 class="subsection-title" id="immigration">Immigration</h3>
 
-      <!-- Portfolio Gallery Grid -->
-      <div class="newrow filterDiv analysis ">
-        <a href="https://www.pbs.org/wgbh/frontline/article/trucks-underride-crashes-nhtsa-dot-iihs-safety-cars/ " target="_blank">
-        <div class="pubtitle">FRONTLINE and ProPublica
-          <div class="date">June 2023</div> 
-          <div class='nerdbox'>SQL</div>
-        </div>
-          <div class="descrip">
-            <h3>Trapped Under Trucks</h3>
-           For this joint investigation with ProPublica, I worked on analyzing federal databases of vehicle crashes to help show the extent of underreporting of underride crashes. I also reverse-engineered a government cost-benefit analysis of mandating metal guards that could prevent these types of crashes to aid our teams reporting on federal inaction on safety regulation. 
-          </div>
-          <img class="itemimage" src="images/truck-rear-guard.jpg" alt="A car slides under a truck in an 'underride crash' in a failed test of a rear underride guard.">          
-        </a>
-        </div>
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/immigration-detention-voluntary-departures-record-high/" target="_blank">
+              <div class="project-header">
+                <h4>Voluntary departures hit record high as detained immigrants lose hope of getting released or winning in court <span class="external">↗</span></h4>
+                <span class="date">February 2026</span>
+              </div>
+              <p class="description">A record 28% of detainees gave up their cases and voluntarily departed in 2025, as aslyum and bond grant rates plummeted.</p>
+              <div class="tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">Datawrapper</span>
+              </div>
+            </a>
+          </article>
 
-      <div class="newrow filterDiv analysis graphics">
-        <a href="https://www.pbs.org/wgbh/frontline/article/uvalde-gun-safety-rights-groups-lobbying/" target="_blank">
-        <div class="pubtitle">FRONTLINE
-          <div class="date">June 2023</div> 
-          <div class='nerdbox'>Recharts, React, Python</div>
-        </div>
-          <div class="descrip">
-            <h3>Gun rights lobbying outpaces gun control lobbying in Texas</h3>
-            I learned a new charting library, Recharts, as well as the ins and outs of Texas lobbying law to better understand and accurately visualize gun lobbying spending in Texas after the Uvalde massacre.
-          </div>
-          <img class="itemimage" src="images/gun-rights-gun-safety-lobbying-spending-2023-texas.jpeg" alt="Guns at a gun show">          
-        </a>
-        </div>
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/high-achiever-eb-1a-visas-scientific-research-awards/" target="_blank">
+              <div class="project-header">
+                <h4>Demand for high-achiever visas fuels a pay-to-play industry for scientific research and accolades <span class="external">↗</span></h4>
+                <span class="date">January 2026</span>
+              </div>
+              <p class="description">A network of services that provide fraudulent credentials and resume padding services for a visa reserved for those at the top of their fields. I appeared on-air to discuss my findings.</p>
+              <span class="tag">Investigative reporting</span>
+              <span class="tag">Social media analysis</span>
+            </a>
+          </article>
 
-      <div class="newrow filterDiv analysis graphics">
-        <a href="https://www.pbs.org/wgbh/frontline/article/north-carolina-inmates-mental-illness-trial/" target="_blank">
-        <div class="pubtitle">FRONTLINE and WFAE
-          <div class="date">April 2023</div> 
-          <div class='nerdbox'>Python, SQL, Altair</div>
-        </div>
-          <div class="descrip">
-            <h3>Measuring the long wait times for inmates with mental illness North Carolina's jails to stand trial</h3>
-            I spent months helping to build a database on inmates in North Carolina jails deemed incapable of standing trial. I cleaned, standardized and vetted the data in Python, helped analyze in SQL and visualized in Altair. 
-          </div>
-          <img class="itemimage" src="images/waittimes_FINAL_0515_fractured.png" alt="A map showing median waits for treatment for inmates for North Carolina's three psychatric hospitals">          
-        </a>
-        </div>
+         <!-- <article class="project">
+            <a href="https://www.cbsnews.com/news/immigration-crackdowns-mostly-non-criminals-chicago-dc-los-angeles-data/" target="_blank">
+              <div class="project-header">
+                <h4>Most arrested in some big city immigration crackdowns had no criminal record, new data shows <span class="external">↗</span></h4>
+                <span class="date">December 2025</span>
+              </div>
+              <p class="description">High-profile crackdowns in major cities mostly resulted in arrests of those without criminal records.</p>
+            </a>
+          </article> -->
 
-      <div class="newrow filterDiv analysis writing">
-        <a href="https://mindsitenews.org/2022/07/28/as-mental-health-startup-cerebral-staggers-adhd-patients-scramble-for-meds/ " target="_blank">
-        <div class="pubtitle">MindSite News
-          <div class="date">July 2022</div> 
-          <div class='nerdbox'>Python, machine learning</div>
-        </div>
-          <div class="descrip">
-            <h3>ADHD patients left hanging as startup Cerebral staggers</h3>
-            After analyzing App Store reviews to identify problems users of telehealth app Cerebral faced, I interviewed ADHD patients who were suddenly unable to get their medications after the company abruptly stopped prescribing controlled substances. 
-          </div>
-          <img class="itemimage" src="images/cerebral.jpg" alt="Teletherapy app Cerebral previously prescribed controlled substances virtually">          
-        </a>
-        </div>
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/ice-detentions-non-criminal-immigrants-violent-crime-convictions-analysis/" target="_blank">
+              <div class="project-header">
+                <h4>ICE detentions of non-criminal immigrants spike; about 8% have violent convictions, analysis of new data shows <span class="external">↗</span></h4>
+                <span class="date">June 2025</span>
+              </div>
+              <p class="description">Only 8% of detainees during Trump's first five months back in office had violent crime convictions, my analysis of ICE data found.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Datawrapper</span>
+              </div>
+            </a>
+          </article>
 
-      <div class="newrow filterDiv analysis">
-        <a href="https://github.com/juliaingram/nys-pharmacies-masters-project" target="_blank">
-        <div class="pubtitle">Columbia Journalism School
-          <div class="date">August 2022</div> 
-          <div class='nerdbox'>Web scraping, pandas, geopandas, geocoding API, QGIS</div>
-        </div>
-          <div class="descrip">
-            <h3>Areas in New York facing physician shortages lose independent pharmacies as financial pressures rise</h3>
-            Low drug reimbursement rates and high fees set by pharmacy benefit managers are threatening independent pharmacies in areas of New York State already facing primary care shortages. I collected data on pharmacy closures by scraping a state website and developed a reliable way of classifying the pharmacies as independent or not. I also geocoded the data and performed a spatial analysis to identify the rate of closures in areas federally designated to be facing a primary care shortage.
-          </div>
-          <img class="itemimage" src="images/pbms.jpeg" alt="CVS Caremark, one of three pharmacy benefit managers that dominate the market, also owns the major pharmacy chain.">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv graphics">
-        <a href="https://pointsunknown.nyc/final-projects/JSchool-Summer-2022/Climate-2/index.html" target="_blank">
-        <div class="pubtitle">Columbia Journalism School
-          <div class="date">August 2022</div> 
-          <div class='nerdbox'>Mapbox, scrollytelling, Google Earth studio, altair, Adobe Illustrator</div>
-        </div>
-          <div class="descrip">
-            <h3>Critical habitats in question</h3>
-            At least three endangered species were denied "critical habitat" status, which would've protected their natual habitats from human development, as a result of Trump-era policies. This visual story explains the policies and their impact. 
-          </div>
-          <img class="itemimage" src="images/habitats.gif" alt="An airport plan threatens an endangered bumblebee's habitat">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv analysis writing">
-        <a href="https://www.verywellhealth.com/maternal-mortality-abortion-ban-5442957" target="_blank">
-        <div class="pubtitle">Verywell Health
-          <div class="date">June 2022</div> 
-          <div class='nerdbox'>Pandas, Datawrapper</div>
-        </div>
-          <div class="descrip">
-            <h3>Examining the relationship between abortion policies and maternal mortality</h3>
-            Published as the Dobbs decision came out, my analysis of CDC data for this story found statistically significant differences in average maternal mortality among states with and without certain abortion restrictions.
-          </div>
-          <img class="itemimage" src="images/maternal-mortality.png" alt="Chart displaying differences in maternal mortality among states with and without abortion restrictions.">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv analysis">
-        <a href="https://www.washingtonpost.com/business/interactive/2021/fossil-fuel-climate-bonus/" target="_blank">
-          <div class="pubtitle">The Washington Post
-            <div class="date">October 2021</div> 
-            <div class='nerdbox'>Spreadsheets, SEC filings</div>
-          </div>
-          <div class="descrip">
-            <h3>Calculating oil CEOs' "climate bonuses"</h3>
-            CEOs of fossil fuel companies make millions for meeting climate targets despite continuing to cause environmental damage, a colleague and I found after looking through company filings. Sen. Elizabeth Warren called for an SEC investigation into the companies executive compensation after therapists story was published.
-          </div>
-          <img class="itemimage" src="images/climatepay.png" alt="Climate bonuses">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv graphics">
-        <a href="https://github.com/jmingram1/zocdoc-scrape" target="_blank">
-          <div class="pubtitle">Columbia Journalism School
-            <div class="date">December 2021</div> 
-            <div class='nerdbox'>Web scraping, Mapbox GL JS</div>
-          </div>
-          <div class="descrip">
-            <h3>Mapping primary care providers on Zocdoc</h3>
-            An interactive map showing disparities in access to care on the online platform Zocdoc in New York City. The map displays data I scraped from Zocdoc's website.
-          </div>
-          <img class="itemimage" src="images/zocdoc-map.gif" alt="Zocdoc map">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv analysis writing">
-        <a href="https://www.washingtonpost.com/business/2021/08/01/tsunami-deferred-debt-is-about-hit-homeowners-no-longer-protected-by-foreclosure-moratorium/" target="_blank">
-          <div class="pubtitle">The Washington Post
-            <div class="date">August 2021</div> 
-            <div class='nerdbox'>Python, spreadsheets</div>
-          </div>
-          <div class="descrip">
-            <h3>Mortgage delinquency data</h3>
-            Over 2 million homeowners were in debt ahead of the national foreclosure moratorium's expiration. Low-income borrowers and borrowers of color were most impacted.
-          </div>
-          <img class="itemimage" src="images/forbearance.jpeg" alt="Mortgage delinquency">          
-        </a>
-        </div>
-
-        <div class="newrow filterDiv graphics">
-          <a href="https://juliaingram.github.io/daylight-saving" target="_blank">
-            <div class="pubtitle">Columbia Journalism School
-              <div class="date">March 2022</div> 
-              <div class='nerdbox'>Web scraping, plotnine, QGIS, Adobe Illustrator, ai2html</div>
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/trump-plan-deport-immigrants-cost/" target="_blank">
+              <div class="project-header">
+                <h4>Trump's plan to deport millions of immigrants would cost hundreds of billions, CBS News analysis shows <span class="external">↗</span></h4>
+                <span class="date">October 2024</span>
+              </div>
+              <p class="description">Apprehending just 1 million people would cost taxpayers $20 billion, my analysis of DHS and EOIR budget data found.</p>
+            </a>
+            <div class="tags">
+              <span class="tag">Public Records</span>
             </div>
-            <div class="descrip">
-              <h3>Push for year-round daylight saving time moves forward</h3>
-              A look at state bills to end biannual clock-switching, and a map of when sunrise and sunset might happen if the U.S. moved to year-round daylight time. 
-            </div>
-            <img class="itemimage" src="images/sunrise-sunset-map.png" alt="Sunrise map on daylight time">          
-          </a>
+          </article>
+
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/trump-plan-deport-immigrants-cost/" target="_blank">
+              <div class="project-header">
+                <h4>On-air reporting on immigration <span class="external">↗</span></h4>
+                <span class="date">2025</span>
+              </div>
+              <p class="description">I scriped and anchored multiple segments for CBS News 24/7 (stremaing platform) on my data reporting.</p>
+              <ul class="related-stories">
+                <li><a href="https://www.youtube.com/watch?v=QXOnWZyQbhc" target="_blank">→ ICE targets NYC immigration courts more than others, analysis finds (October 2025)</a></li>
+                <li><a href="https://www.cbsnews.com/video/how-sanctuary-policies-impact-ice-arrests/" target="_blank">→ How sanctuary policies impact ICE arrests (August 2025)</a></li>
+                <li><a href="https://www.cbsnews.com/video/how-many-undocumented-immigrants-have-left-us-this-year/" target="_blank">→ How many undocumented immigrants have left the U.S. this year? (August 2025)</a></li>
+              </ul>
+            </a>
+          </article>
+          
+
+          <!-- DOGE / Elon Musk -->
+          <h3 class="subsection-title" id="doge">DOGE / Elon Musk</h3>
+
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/doge-cuts-contracts-grants-leases-searchable-list/" target="_blank">
+              <div class="project-header">
+                <h4>DOGE says it has canceled thousands of federal contracts, grants and leases. Here's a searchable list <span class="external">↗</span></h4>
+                <span class="date">May 2025</span>
+              </div>
+              <p class="description">Auto-updating searchable database tracking contracts DOGE says it canceled.</p>
+              <div class="tags">
+                <span class="tag">Web scraping</span>
+                <span class="tag">Python</span>
+                <span class="tag">Javascript</span>
+              </div>
+            </a>
+            <ul class="related-stories">
+              <li><a href="https://www.cbsnews.com/news/doge-usaid-contracts-details-removed-wall-of-receipts/" target="_blank">→ DOGE removes details on canceled USAID contracts from "wall of receipts" (March 2025)</a></li>
+              <li><a href="https://www.cbsnews.com/news/doge-wall-of-receipts-misleading-inaccurate-claims/" target="_blank">→ DOGE continues to publish misleading or inaccurate claims on its "wall of receipts" (May 2025)</a></li>
+              <li><a href="https://www.cbsnews.com/news/doge-claims-slashing-costs-cbs-news-analysis/" target="_blank">→ DOGE continues to say it's cutting costs, but savings are fraction of what's claimed, CBS News analysis finds (August 2025)</a></li>
+
+            </ul>
+          </article>
+
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/elon-musk-trump-social-media-election-2024/" target="_blank">
+              <div class="project-header">
+                <h4>The X factor: How Trump ally Elon Musk is using social media to prime voter mistrust ahead of 2024 election <span class="external">↗</span></h4>
+                <span class="date">October 2024</span>
+              </div>
+              <p class="description">Elon Musk amassed more than 3 billion views on posts containing false or misleading information about election integrity ahead of the 2024 election. I scraped all of Musk's X-posts, used AI to categorize them and fact-checked the claims by hand.</p>
+              <div class="tags">
+                <span class="tag">Web scraping</span>
+                <span class="tag">Python</span>
+                <span class="tag">AI-assisted reporting</span>
+                <span class="tag">Social media analysis</span>
+              </div>
+            </a>
+          </article>
+
+
+          <!-- Other CBS -->
+          <h3 class="subsection-title" id="other-cbs">Other</h3>
+
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/colleges-less-diversity-admissions-post-affirmative-action/" target="_blank">
+              <div class="project-header">
+                <h4>Colleges are slightly less diverse as admissions officers seek ways to adapt post-affirmative action <span class="external">↗</span></h4>
+                <span class="date">June 2025</span>
+              </div>
+              <p class="description">Data from over 100 univiersities and colleges give an early indicator that schools are becoming less diverse after the Supreme Court barred race-conscious admissions. I joined a team of reporters in gathering and analyzing the data from the schools individually.</p>
+              <div class="tags">
+                <span class="tag">Building a database</span>
+                <span class="tag">Python</span>
+                <span class="tag">Datawrapper</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="project">
+            <a href="https://www.cbsnews.com/news/instagram-violence/" target="_blank">
+              <div class="project-header">
+                <h4>Hundreds of Instagram accounts push graphic real-life violence to millions, CBS News finds <span class="external">↗</span></h4>
+                <span class="date">June 2025</span>
+              </div>
+              <p class="description">After Meta claimed to fix a glitch that pushed violent content to users, we found it was still widespread and easily accessible.</p>
+              <div class="tags">
+                <span class="tag">Investigative reporting</span>
+              </div>
+            </a>
+          </article>
+        </section>
+
+        <!-- FRONTLINE & Earlier Work -->
+        <section class="work-section">
+          <div class="section-header">
+          <h2 class="section-title">Earlier Work</h2>
           </div>
+          <article class="project featured">
+            <a href="https://www.pbs.org/wgbh/frontline/article/trucks-underride-crashes-nhtsa-dot-iihs-safety-cars/" target="_blank">
+              <div class="project-header">
+                <h3>Trapped Under Trucks <span class="external">↗</span></h3>
+                <span class="date">FRONTLINE × ProPublica, 2023</span>
+              </div>
+              <p class="description">Deadly underride crashes, in which a car slides underneath the side or rear of a truck, are widely underreported and underregulated, a joint ProPublica and FRONTLINE investigation found.</p>
+              <div class="tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Investigative reporting</span>
+              </div>
+            </a>
+          </article>
 
-      <div class="newrow filterDiv analysis graphics">
-        <a href="https://juliaingram.github.io/historic-sites/" target="_blank">
-        <div class="pubtitle">Columbia Journalism School
-          <div class="date">April 2022</div> 
-          <div class='nerdbox'>Scrollytelling, plotnine, D3, Illustrator, ai2html, Python</div>
-        </div>
-          <div class="descrip">
-            <h3>Quantifying historic sites at risk of facing climate disasters</h3>
-            Nearly a fifth of sites listed on the National Register of Historic Places lie in the path of potential climate disasters, according to an analysis of datasets published by FEMA and the National Register.
-          </div>
-          <img class="itemimage" src="historic-sites/big-basin-after.png" alt="Big Basin Redwood State Park's Administrative Headquarters, destroyed by the CZU Lighting Complex fire in 2020.">          
-        </a>
-        </div>
+          <article class="project featured">
+            <a href="https://www.pbs.org/wgbh/frontline/article/north-carolina-inmates-mental-illness-trial/" target="_blank">
+              <div class="project-header">
+                <h3>The Wait Inmates With Mental Illness Endure Because They’re Too Sick For Trial <span class="external">↗</span></h3>
+                <span class="date">FRONTLINE × WFAE, 2023</span>
+              </div>
+              <p class="description">From 2016 to 2023, half of those charged with felonies who were deemed too mentally ill to stand trial waited more than 313 days in custody before they could receieve psychiatric treatment, necessary for moving forward with their case. Reaching that number required wrangling messy data from as many counties in North Carolina as possible.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Public records</span>
+                <span class="tag">Building a database</span>
+              </div>
+            </a>
+          </article>
 
- <!--        <div class="newrow filterDiv analysis graphics">
+          <article class="project featured">
+            <a href="https://www.washingtonpost.com/business/interactive/2021/fossil-fuel-climate-bonus/" target="_blank">
+              <div class="project-header">
+                <h3>Despite spills and air pollution, fossil fuel companies award CEOs for environmental records <span class="external">↗</span></h3>
+                <span class="date">The Washington Post, 2021</span>
+              </div>
+              <p class="description">CEOs received millions in climate-linked bonuses despite continued environmental damage, and consistently moved the goalposts to obtain those bonuses, according to an analysis of SEC records.</p>
+              <div class="tags">
+                <span class="tag">Public records</span>
+              </div>
+            </a>
+          </article>
 
-          <a href="https://juliaingram.github.io/ny-pharmacy-access/" target="_blank">
-          <div class="pubtitle">Columbia Journalism School
-            <div class="date">May 2022</div> 
-            <div class='nerdbox'>Datawrapper, Python</div>
-          </div>
-            <div class="descrip">
-              <h3>Disparities in pharmacy access in New York</h3>
-              Most counties in New York have only one or two pharmacies for every 10,000 people &mdash; and the state's least populous county doesn't have any at all. Majority Native American or majority Black census tracts have fewer pharmacies per 1,000 people than other census tracts did, I found.
-            </div>
-            <img class="itemimage" src="ny-pharmacy-access/map.png" alt="Big Basin Redwood State Park's Administrative Headquarters, destroyed by the CZU Lighting Complex fire in 2020.">          
-          </a>
-          </div> -->
+          <article class="project featured">
+            <a href="https://www.nytimes.com/2021/08/07/us/covid-kindergarten-enrollment.html" target="_blank">
+              <div class="project-header">
+                <h3>The Kindergarten Exodus <span class="external">↗</span></h3><index class="html"></index>
+                <span class="date">The New York Times × Stanford Big Local News, 2021</span>
+              </div>
+              <p class="description">In 2020, when the pandemic hit, 10,000 local public schools lost at least 20 percent of their kindergartners, according to an analysis of enrollment at 70,000 public schools across 33 states. I filed public records requests in all 50 states to help obtain this data.</p>
+              <div class="tags">
+                <span class="tag">Public records</span>
+                <span class="tag">Building a database</span>
+              </div>
+            </a>
+          </article>
 
-      <div class="newrow filterDiv graphics">
+          <article class="project">
+            <a href="https://mindsitenews.org/2022/07/28/as-mental-health-startup-cerebral-staggers-adhd-patients-scramble-for-meds/" target="_blank">
+              <div class="project-header">
+                <h3>As Mental Health Startup Cerebral Staggers, ADHD Patients Scramble for Meds <span class="external">↗</span></h3>
+                <span class="date">MindSite News, 2022</span>
+              </div>
+              <p class="description">After the telehealth app Cerebral came under regulatory fire and stopped prescribing controlled substances, those who had become dependent on it for ADHD medication faced potential withdrawal. I came about this story after building an ML classifier to analyze App Store reviews of teletherapy apps, finding hundreds of users reporting issues like the ones I reported out.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Machine learning</span>
+                <span class="tag">Web scraping</span>
+              </div>
+            </a>
+          </article>
 
-        <a href="https://juliaingram.github.io/ca-utility-fires" target="_blank">
-        <div class="pubtitle">Columbia Journalism School
-          <div class="date">April 2022</div> 
-          <div class='nerdbox'>Scrollytelling, QGIS, D3, Illustrator, ai2html, PDF data extraction, Python</div>
-        </div>
-          <div class="descrip">
-            <h3>Visualizing utility-caused fires in California</h3>
-            The state auditor found inadequate oversight of California's electrical utilities, publishing findings in a 91-page report. I analyzed their source data and created an interactive visualization to display
-            how utilities have caused thousands of fires. 
-          </div>
-          <img class="itemimage" src="ca-utility-fires/cal-fires-updated_svg-laptop.png" alt="California utility-caused fires">          
-        </a>
-        </div>
-
-        <div class="newrow filterDiv analysis">
-
-          <a href="https://juliaingram.github.io/therapy-apps" target="_blank">
-            <div class="pubtitle">Columbia Journalism School
-              <div class="date">February 2022</div> 
-              <div class='nerdbox'>Scraping, Machine Learning, HTML, CSS</div>
-            </div>
-            <div class="descrip">
-              <h3>Analyzing therapy app reviews</h3>
-              I built a machine learning classifer to analyze app store reviews and find that hundreds of users of the apps TalkSpace and Cerebral feel unfairly charged or deal with unresponsive therapists.
-            </div>
-            <img class="itemimage" src="images/talkspace-cerebral-bar.png" alt="Therapy apps">          
-          </a>
-          </div>
-
-      <div class="newrow filterDiv analysis">
-
-        <a href="https://www.nbcnews.com/health/kids-health/has-child-abuse-surged-under-covid-19-despite-alarming-stories-n1234713" target="_blank">
-          <div class="pubtitle">NBC News
-            <div class="date">July 2020</div> 
-            <div class='nerdbox'>Public records requests, spreadsheets</div>
-          </div>
-          <div class="descrip">
-            <h3>Quantifying child abuse and neglect reporting</h3>
-            I requested data from all states and obtained it from 43, showing that reports of child abuse around the nation have plunged during the first wave of the coronavirus pandemic and lockdown.
-          </div>
-          <img class="itemimage" src="images/childabuse.jpeg" alt="Child abuse underreporting">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv analysis graphics">
-
-        <a href="https://www.verywellhealth.com/analysis-has-omicron-peaked-5218085" target="_blank">
-          <div class="pubtitle">Verywell Health
-            <div class="date">February 2022</div> 
-            <div class='nerdbox'>Python, Datawrapper</div>
-          </div>
-          <div class="descrip">
-            <h3>Visualizing Omicron's peak</h3>
-            I worked with CDC data to show the Omicron COVID wave peaked around the same time as the 2021 winter wave. 
-          </div>
-          <img class="itemimage" src="images/omicron-peak.png" alt="Child abuse underreporting">          
-        </a>
-        </div>
-      
-      <div class="newrow filterDiv analysis graphics">
-
-        <a href="https://juliaingram.github.io/citibike" target="_blank">
-          <div class="pubtitle">Columbia Journalism School
-            <div class="date">February 2022</div> 
-            <div class='nerdbox'>Python, plotnine/ggplot, Tableau</div>
-          </div>
-          <div class="descrip">
-            <h3>Analyzing patterns in Citi Bike ridership</h3>
-            Citi Bike ridership exploded in 2021, and fewer people are using it to commute in the morning, my analysis of released by the company showed. I also built an animated map of the most popular stations throughout the day.
-          </div>
-          <img class="itemimage" src="images/citibike-thames.png" alt="Citi Bike Ridership">          
-        </a>
-        </div>
-      <!--
-      <div class="newrow filterDiv writing">
-
-        <a href="https://www.nbcnews.com/news/us-news/he-reported-being-assaulted-cops-minneapolis-pd-why-did-nobody-n1236128" target="_blank">
-          <div class="pubtitle">NBC News
-            <div class="date">August 2020</div> 
-            <div class='nerdbox'>Public records</div>
-          </div>
-          <div class="descrip">
-            <h3>Unresolved complaints against Minneapolis police</h3>
-            Hundreds of complaints filed against the Minneapolis Police Department were filed as 'inquries' and never addressed. I tracked down and called people who filed complaints and never heard from the department.
-          </div>
-          <img class="itemimage" src="images/nbc-cops.jpeg" alt="Police misconduct complaints">          
-        </a>
-        </div> -->
-
-        <div class="newrow filterDiv writing">
-
-          <a href="https://stanforddaily.com/2018/08/28/a-closer-look-at-stanfords-leave-of-absence-policies/" target="_blank">
-            <div class="pubtitle">The Stanford Daily
-              <div class="date">August 2018</div> 
-              <div class='nerdbox'>Public records</div>
-            </div>
-            <div class="descrip">
-              <h3>Stanford placed students with mental illness on involuntary leaves of absence</h3>
-              Stanford University placed students who experienced suicidal ideation or attempted suicide on a forced leave of absence, a move that some students said actually worsened their mental health. 
-            </div>
-            <img class="itemimage" src="images/vaden-sdaily.jpg" alt="Vaden Health Center at Stanford">          
-          </a>
-          </div>
-
-        <div class="newrow filterDiv writing">
-
-          <a href="https://www.miamiherald.com/news/local/community/miami-dade/article233266173.html" target="_blank">
-            <div class="pubtitle">Miami Herald
-              <div class="date">August 2019</div> 
-              <div class='nerdbox'>On the ground reporting, photo/video</div>
-            </div>
-            <div class="descrip">
-              <h3>Lack of responsibility for cleanup leaves abandoned boats in the Miami River</h3>
-              Derelict boats littered the Miami River. I followed a growing movement as neighboring residents took it to city council.
-            </div>
-            <img class="itemimage" src="images/boat-miami.jpg" alt="Abandoned boats in the Miami River">          
-          </a>
-          </div>
-
-        <div class="newrow filterDiv analysis writing">
-
-          <a href="https://stanforddaily.com/2019/02/05/amid-record-number-of-transports-a-look-at-stanfords-alcohol-prevention-initiatives/" target="_blank">
-            <div class="pubtitle">The Stanford Daily
-              <div class="date">February 2019</div> 
-              <div class='nerdbox'>Public records</div>
-            </div>
-            <div class="descrip">
-              <h3>Record hospitalizations for drinking at Stanford</h3>
-              Stanford shifts much of the responsibility of regulating drinking on campus to student RAs. Records showed that in 2018, more students were hospitalizied for alcohol poisoning than had been in 12 years.
-            </div>
-            <img class="itemimage" src="images/alcohol-chart.png" alt="Graphic of underage transports for drinking">          
-          </a>
-          </div>
-
-      <div class="newrow filterDiv writing">
-
-        <a href="https://www.miamiherald.com/news/local/environment/article234158642.html" target="_blank">
-          <div class="pubtitle">Miami Herald
-            <div class="date">August 2019</div> 
-            <div class='nerdbox'>Explanatory reporting</div>
-          </div>
-          <div class="descrip">
-            <h3>The politics of regulating single-use plastic in Miami</h3>
-            In Florida, a state pre-emption prevents local municipalities from regulating plastics, leaving big business to force small towns to roll back their plastic bans.              </div>
-          <img class="itemimage" src="images/plastic-miami.jpeg" alt="Plastics floating in the ocean">          
-        </a>
-        </div>
-
-      <div class="newrow filterDiv writing">
-
-        <a href="https://columbianewsservice.com/2021/10/19/tensions-between-delivery-cyclists-and-upper-west-residents-mount-in-latest-e-bike-battle/?back-url=https%3A%2F%2Fcolumbianewsservice.com" target="_blank">
-          <div class="pubtitle">Columbia News Service
-            <div class="date">October 2021</div> 
-            <div class='nerdbox'>On the ground reporting, photo/video</div>
-          </div>
-          <div class="descrip">
-            <h3>Delivery workers' use of e-bikes sparks tension on the Upper West Side</h3>
-            On New York City's Upper West Side, residents argue e-bikes are a danger to pedestrians. But delivery workers rely on them to make a living wage. </div>
-          <img class="itemimage" src="images/ebike-delivery.jpeg" alt="A delivery cyclist and his e-bike">          
-        </a>
-        </div>
-        
-      <div class="newrow filterDiv local analysis writing">
-
-        <a href="https://columbianewsservice.com/2021/12/17/nyc-daycares-and-preschools-face-hiring-challenges-compounded-by-vaccine-mandate/?back-url=https://columbianewsservice.com/" target="_blank">
-          <div class="pubtitle">Columbia News Service
-            <div class="date">December 2021</div> 
-            <div class='nerdbox'>Datawrapper</div>
-          </div>
-          <div class="descrip">
-            <h3>Vaccine mandate adds staffing pressure to daycares</h3>
-            Industry employment was creeping toward pre-pandemic levels. But in small centers, the absence of even one teacher is acutely felt. </div>
-          <img class="itemimage" src="images/childcare-chart.png" alt="Graphic displaying trends in childcare employment in NYC">          
-        </a>
-        </div>
-
-        <div class="newrow filterDiv writing">
-
-          <a href="https://stanforddaily.com/2021/05/22/tdx-appeals-disbanding-decision-citing-efforts-to-intervene-before-students-2020-death/" target="_blank">
-            <div class="pubtitle">The Stanford Daily
-              <div class="date">May 2021</div> 
-              <div class='nerdbox'>Public records</div>
-            </div>
-            <div class="descrip">
-              <h3>Fraternity deflects blame to University after student death</h3>
-              Stanford disbanded the TDX fraternity after a student died of an accidental overdose in its on-campus house. More than a year later, the organization pushed for its reinstatement, claiming Stanford failed to intervene in a second drug incident two days before the student's death.</div>
-            <img class="itemimage" src="images/tdx.jpg" alt="TDX fraternity at Stanford">          
-          </a>
-          </div>
-    
-
-<div class="row">
-
-</div>
-
+          <article class="project">
+            <a href="https://mindsitenews.org/2022/07/28/as-mental-health-startup-cerebral-staggers-adhd-patients-scramble-for-meds/" target="_blank">
+              <div class="project-header">
+                <h3>Restricting Abortion Will Cost Women Their Lives <span class="external">↗</span></h3>
+                <span class="date">Verywell Health, 2022</span>
+              </div>
+              <p class="description">I adapted a methodology from a scientific paper to examine correlations between state abortion restrictions and maternal mortality, then tested each link for statistical signfiicance. I found that the population living in states with four restrictions experienced mortality rates 27% to 61% higher than those without the policies.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Statistical analysis</span>
+              </div>
+            </a>
+          </article>
+        </section>
+      </main>
+    </div>
   </body>
-
 </html>
